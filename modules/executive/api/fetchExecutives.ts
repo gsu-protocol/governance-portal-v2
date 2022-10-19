@@ -13,6 +13,8 @@ import logger from 'lib/logger';
 import { getExecutiveProposalsCacheKey, githubExecutivesCacheKey } from 'modules/cache/constants/cache-keys';
 import { ONE_HOUR_IN_MS } from 'modules/app/constants/time';
 import { allGithubExecutives } from 'modules/gql/queries/allGithubExecutives';
+import { config } from 'lib/config';
+
 
 export async function getGithubExecutives(network: SupportedNetworks): Promise<CMSProposal[]> {
   const cachedProposals = await cacheGet(githubExecutivesCacheKey, network);
@@ -23,21 +25,21 @@ export async function getGithubExecutives(network: SupportedNetworks): Promise<C
   const proposalIndex = await (await fetch(EXEC_PROPOSAL_INDEX)).json();
 
   const githubRepo = {
-    owner: 'makerdao',
-    repo: 'community',
-    page: 'governance/votes'
+    owner: config.EXECUTIVE_GITHUB_OWNER,
+    repo: config.EXECUTIVE_GITHUB_REPO,
+    branch: config.EXECUTIVE_GITHUB_BRANCH,
+    page: config.EXECUTIVE_GITHUB_PAGE
   };
 
   const githubResponse = await fetchGithubGraphQL(githubRepo, allGithubExecutives);
+
   const proposals = githubResponse.repository.object.entries
     .filter(entry => entry.type === 'blob')
     .map(file => {
       try {
         const pathParts = file.path.split('/');
         const last = pathParts.pop();
-        const path = `https://raw.githubusercontent.com/${githubRepo.owner}/${
-          githubRepo.repo
-        }/master/${pathParts.join('/')}/${encodeURIComponent(last)}`;
+        const path = `https://raw.githubusercontent.com/${githubRepo.owner}/${githubRepo.repo}/${githubRepo.branch}/${pathParts.join('/')}/${encodeURIComponent(last)}`;
         return parseExecutive(file.object.text, proposalIndex, path, network);
       } catch (e) {
         logger.error(`getGithubExecutives: network ${network}`, e);
@@ -46,6 +48,7 @@ export async function getGithubExecutives(network: SupportedNetworks): Promise<C
       }
     });
 
+    // console.log(proposals)
   const filteredProposals: CMSProposal[] = proposals
     .filter(x => !!x)
     .filter(x => x?.address !== ZERO_ADDRESS) as CMSProposal[];

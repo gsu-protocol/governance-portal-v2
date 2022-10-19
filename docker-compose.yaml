@@ -1,0 +1,47 @@
+version: '3.5'
+
+services:
+  # Building Image
+  governance:
+    build: .
+    image: governance
+    env_file:
+      - .env
+  
+  # Building database
+  database:
+    container_name: governance_db
+    image: mongo:6.0
+    ports:
+      - 7866:27017
+    networks:
+       - governance_network
+    volumes:
+      - vote_mongo_data:/data/db
+    depends_on:
+      - governance
+    restart: unless-stopped
+
+  # Setting up governance FE service
+  governance_fe:
+    container_name: governance_fe
+    image: governance
+    ports:
+       - "7867:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+       - governance_network
+    depends_on:
+      - database
+
+
+volumes:
+  vote_mongo_data:
+    driver: local
+
+networks:
+  governance_network:
+      name: governance_network
+      driver: bridge
