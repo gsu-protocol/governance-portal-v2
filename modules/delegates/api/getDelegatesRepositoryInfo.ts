@@ -1,3 +1,4 @@
+import { config } from 'lib/config';
 import { SupportedNetworks } from 'modules/web3/constants/networks';
 
 export type RepositoryInfo = {
@@ -7,14 +8,17 @@ export type RepositoryInfo = {
 };
 
 export function getDelegatesRepositoryInformation(network: SupportedNetworks): RepositoryInfo {
+
   const repoMainnet = {
-    owner: 'makerdao',
-    repo: 'community',
+    owner: config.EXECUTIVE_GITHUB_OWNER,
+    repo: config.EXECUTIVE_GITHUB_REPO,
+    branch: config.EXECUTIVE_GITHUB_BRANCH,
     page: 'governance/delegates'
   };
 
+
   const repoTest = {
-    owner: 'makerdao-dux',
+    owner: 'block360',
     repo: 'voting-delegates',
     page: 'delegates'
   };

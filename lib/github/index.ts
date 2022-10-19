@@ -58,6 +58,6 @@ export async function fetchGithubGraphQL(
   query: string
 ): Promise<GraphQlQueryResponseData> {
   const octokit = getNextToken();
-  const data = await octokit.graphql(query, { owner, name: repo, expression: `master:${page}` });
+  const data = await octokit.graphql(query, { owner, name: repo, expression: `${config.EXECUTIVE_GITHUB_BRANCH}:${page}` });
   return data as GraphQlQueryResponseData;
 }

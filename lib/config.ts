@@ -16,6 +16,15 @@ type SystemConfig = {
   REDIS_URL: string;
   MIGRATION_WEBHOOK_URL: string;
   DASHBOARD_PASSWORD: string;
+
+  EXECUTIVE_GITHUB_OWNER: string;
+  EXECUTIVE_GITHUB_REPO: string;
+  EXECUTIVE_GITHUB_BRANCH: string;
+  EXECUTIVE_GITHUB_PAGE: string;
+  LOCAL_SPOCK_URL: string;
+  GOERLI_SPOCK_URL: string;
+  STAGING_MAINNET_SPOCK_URL: string;
+  MAINNET_SPOCK_URL: string;
 };
 
 export const config: SystemConfig = {
@@ -35,5 +44,13 @@ export const config: SystemConfig = {
   MIXPANEL_DEV: process.env.NEXT_PUBLIC_MIXPANEL_DEV || '',
   REDIS_URL: process.env.REDIS_URL || '',
   MIGRATION_WEBHOOK_URL: process.env.MIGRATION_WEBHOOK_URL || '',
-  DASHBOARD_PASSWORD: process.env.DASHBOARD_PASSWORD || ''
+  DASHBOARD_PASSWORD: process.env.DASHBOARD_PASSWORD || '',
+  EXECUTIVE_GITHUB_OWNER: process.env.EXECUTIVE_GITHUB_OWNER || '',
+  EXECUTIVE_GITHUB_REPO: process.env.EXECUTIVE_GITHUB_REPO || '',
+  EXECUTIVE_GITHUB_BRANCH: process.env.EXECUTIVE_GITHUB_BRANCH || '',
+  EXECUTIVE_GITHUB_PAGE: process.env.EXECUTIVE_GITHUB_PAGE || '',
+  LOCAL_SPOCK_URL: process.env.LOCAL_SPOCK_URL || '',
+  GOERLI_SPOCK_URL: process.env.GOERLI_SPOCK_URL || '',
+  STAGING_MAINNET_SPOCK_URL: process.env.STAGING_MAINNET_SPOCK_URL || '',
+  MAINNET_SPOCK_URL: process.env.MAINNET_SPOCK_URL || ''
 };

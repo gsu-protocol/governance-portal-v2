@@ -1,0 +1,15 @@
+.git
+.github
+.gitignore
+.pre-commit*
+.vscode
+.history
+.env*.local
+.husky
+.next
+codecov.yml
+node_modules
+certificates
+cypress
+out
+cache
