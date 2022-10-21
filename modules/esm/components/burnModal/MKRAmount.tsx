@@ -45,12 +45,12 @@ const MKRAmount = ({
   return (
     <Flex sx={{ flexDirection: 'column', alignItems: 'center' }}>
       <Close onClick={() => setShowDialog(false)} sx={{ alignSelf: 'flex-end' }} />
-      <Text variant="heading">Enter the amount of MKR to burn</Text>
+      <Text variant="heading">Enter the amount of GSUp to burn</Text>
       <MKRAmountView setBurnAmount={setBurnAmount} burnAmount={burnAmount} mkrBalance={mkrBalance} />
       {lockedInChief ? (
         <Alert variant="notice">
-          You have {formatValue(lockedInChief)} MKR locked in DSChief. Withdraw MKR from DSChief to burn it in
-          the ESM.
+          You have {formatValue(lockedInChief)} GSUp locked in DSChief. Withdraw GSUp from DSChief to burn it
+          in the ESM.
         </Alert>
       ) : null}
       <Grid columns={[1, 2]} mt={4} sx={{ width: bpi < 1 ? '100%' : undefined }}>

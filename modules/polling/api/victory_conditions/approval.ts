@@ -18,7 +18,7 @@ export function extractWinnerApproval(currentVotes: ParsedSpockVote[]): number |
     });
   });
 
-  // Sort options by MKR support
+  // Sort options by GSUp support
   const sortedOptions = Object.keys(votes)
     .map(option => {
       return {
@@ -30,7 +30,7 @@ export function extractWinnerApproval(currentVotes: ParsedSpockVote[]): number |
       return prev.mkrSupport.isGreaterThan(next.mkrSupport) ? -1 : 1;
     });
 
-  // if the 2 first options share the same MKR amount, return null
+  // if the 2 first options share the same GSUp amount, return null
   if (sortedOptions.length >= 2) {
     if (sortedOptions[0].mkrSupport.isEqualTo(sortedOptions[1].mkrSupport)) {
       return null;

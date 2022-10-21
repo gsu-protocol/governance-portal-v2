@@ -19,7 +19,7 @@ function Card({
       <Flex sx={{ height: '100%' }}>
         <Box sx={{ p: 3, display: ['none', 'block'] }}>
           <Heading as="h1" sx={{ fontSize: '32px' }}>
-            <Text sx={{ color: infoPoint.color }}>{infoPoint.number}</Text>
+            <Text sx={{ color: '' }}>{infoPoint.number}</Text>
           </Heading>
         </Box>
         <Flex
@@ -35,11 +35,11 @@ function Card({
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Heading as="h1" sx={{ mb: 3, p: [3, 0], flex: 1 }}>
-                <Text as="p" sx={{ color: infoPoint.color, display: ['block', 'none'] }}>
+                <Text as="p" sx={{ color: 'primary', display: ['block', 'none'] }}>
                   {infoPoint.number}
                 </Text>
                 <Text>{infoPoint.titleFirst}</Text>
-                <Text sx={{ color: infoPoint.color, ml: 1 }}>{infoPoint.titleSecond}</Text>
+                <Text sx={{ color: 'primary', ml: 1 }}>{infoPoint.titleSecond}</Text>
               </Heading>
               {children}
             </Flex>
@@ -56,7 +56,7 @@ function Card({
                 >
                   <Flex sx={{ alignItems: 'center' }}>
                     <Text>{link.linkTitle}</Text>
-                    <Icon ml={2} name="arrowTopRight" size={3} sx={{ color: infoPoint.color }} />
+                    <Icon ml={2} name="arrowTopRight" size={3} sx={{ color: 'primary' }} />
                   </Flex>
                 </ExternalLink>
               </Box>
@@ -78,11 +78,11 @@ export default function InformationParticipateMakerGovernance(): React.ReactElem
         <Box sx={{ p: 3, height: '100%' }}>
           <Flex sx={{ justifyContent: 'space-between', mb: 3, height: '100%', alignItems: 'center' }}>
             <Box sx={{ mr: 2, flex: 1 }}>
-              <Heading as="h2">How to participate in Maker Governance</Heading>
+              <Heading as="h2">How to participate in GSU protocol Governance</Heading>
             </Box>
             <Box>
               <ExternalLink
-                href="https://manual.makerdao.com/"
+                href="https://manual.gsuprotocol.io/"
                 title="Learn more"
                 styles={{ color: 'inherit' }}
               >
@@ -112,7 +112,7 @@ export default function InformationParticipateMakerGovernance(): React.ReactElem
                   <Box>
                     <Text
                       sx={{
-                        color: infoPoint.color,
+                        color: 'primary',
                         mr: 1
                       }}
                     >
@@ -120,7 +120,7 @@ export default function InformationParticipateMakerGovernance(): React.ReactElem
                     </Text>
                     <Text
                       sx={{
-                        color: active.number === infoPoint.number ? infoPoint.color : 'text',
+                        color: 'text',
                         fontSize: 3,
                         fontWeight: 'semiBold'
                       }}
@@ -136,10 +136,10 @@ export default function InformationParticipateMakerGovernance(): React.ReactElem
                 borderRadius: 'medium',
                 backgroundColor: 'semiTransparentBackground',
                 width: ['100%', '70%'],
-                backgroundImage: [
-                  'none',
-                  'url(/home/understand-governance/00_visual_how_to_participate.png);'
-                ],
+                // backgroundImage: [
+                //   'none',
+                //   'url(/home/understand-governance/00_visual_how_to_participate.png);'
+                // ],
                 backgroundPosition: `100% -${indexCard * 430}px`,
                 backgroundSize: ['340px'],
                 backgroundRepeat: 'no-repeat',
@@ -161,7 +161,7 @@ export default function InformationParticipateMakerGovernance(): React.ReactElem
               ) : (
                 <Box>
                   <Card infoPoint={active}>
-                    <Box
+                    {/* <Box
                       sx={{
                         borderRadius: 'medium',
                         backgroundImage: 'url(/home/understand-governance/00_visual_how_to_participate.png);',
@@ -173,7 +173,7 @@ export default function InformationParticipateMakerGovernance(): React.ReactElem
                         width: '150px',
                         overflow: 'hidden'
                       }}
-                    />
+                    /> */}
                   </Card>
                 </Box>
               )}

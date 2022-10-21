@@ -10,7 +10,7 @@ This is the repo containing the code for the [Maker Governance Portal](https://v
 
 ### To run locally:
 
-While the portal is hosted by MakerDAO at https://vote.makerdao.com, it can also be run by anyone on their local machine.
+While the portal is hosted by GSU protocol at https://vote.makerdao.com, it can also be run by anyone on their local machine.
 
 In order to run the project locally, you must have the following installed on the machine:
 
@@ -61,9 +61,9 @@ At this point, you should be able to access the application by going to the addr
 
 ### Releasing
 
-To do releases of the governance portal, please use `npm version minor`  or `npm version patch` to bump the version in the package.json and create a tag. 
+To do releases of the governance portal, please use `npm version minor` or `npm version patch` to bump the version in the package.json and create a tag.
 
-The tag and versioning should be done on develop, and then merged to master through a PR.  To push your local tag use the command `git push origin develop --follow-tags`.
+The tag and versioning should be done on develop, and then merged to master through a PR. To push your local tag use the command `git push origin develop --follow-tags`.
 
 ### Additional configuration overview:
 

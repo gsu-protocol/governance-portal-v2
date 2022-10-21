@@ -127,7 +127,7 @@ const QuickVote = ({
             disabled={!isChoiceValid || !votingWeight || !votingWeight.total.gt(0)}
           >
             {!votingWeight || !votingWeight.total.gt(0)
-              ? 'Deposit MKR to vote'
+              ? 'Deposit GSUp to vote'
               : editing
               ? 'Update vote'
               : 'Add vote to ballot'}

@@ -185,9 +185,9 @@ export default function DefaultVoteModalView({
 
   const votingMessage =
     currentSlate && currentSlate.includes(spellAddress) && currentSlate.length > 1
-      ? 'Concentrate all my MKR on this proposal'
+      ? 'Concentrate all my GSUp on this proposal'
       : currentSlate && !currentSlate.includes(spellAddress) && isHat
-      ? 'Add MKR to secure the protocol'
+      ? 'Add GSUp to secure the protocol'
       : 'Submit Vote';
 
   return (
@@ -244,7 +244,7 @@ export default function DefaultVoteModalView({
           </Text>
           {lockedMkr ? (
             <Text as="p" color="text" mt={[0, 2]} sx={{ fontSize: 3, fontWeight: 'medium' }}>
-              {formatValue(lockedMkr, 'wad', 6)} MKR
+              {formatValue(lockedMkr, 'wad', 6)} GSUp
             </Text>
           ) : (
             <Box sx={{ mt: [0, 2] }}>
@@ -254,11 +254,11 @@ export default function DefaultVoteModalView({
         </GridBox>
         <GridBox bpi={bpi}>
           <Text as="p" color="onSecondary" sx={{ fontSize: 3 }}>
-            MKR supporting
+            GSUp supporting
           </Text>
           {spellData ? (
             <Text as="p" color="text" mt={[0, 2]} sx={{ fontSize: 3, fontWeight: 'medium' }}>
-              {formatValue(mkrSupporting)} MKR
+              {formatValue(mkrSupporting)} GSUp
             </Text>
           ) : (
             <Box sx={{ mt: [0, 2] }}>
@@ -272,7 +272,7 @@ export default function DefaultVoteModalView({
           </Text>
           {lockedMkr && spellData ? (
             <Text as="p" color="text" mt={[0, 2]} sx={{ fontSize: 3, fontWeight: 'medium' }}>
-              {formatValue(afterVote)} MKR
+              {formatValue(afterVote)} GSUp
             </Text>
           ) : (
             <Box sx={{ mt: [0, 2] }}>
@@ -353,7 +353,7 @@ export default function DefaultVoteModalView({
                 setHatChecked(event.target.checked);
               }}
             />
-            Keep my MKR on old proposal to secure the Maker protocol
+            Keep my GSUp on old proposal to secure the GSU protocol
           </Label>
         ) : null}
       </Box>

@@ -32,16 +32,16 @@ export const useDelegateLock = (voteDelegateAddress: string): LockResponse => {
 
   const lock = (mkrToDeposit: BigNumber, callbacks?: Record<string, () => void>) => {
     const lockTxCreator = () => vdContract.lock(mkrToDeposit);
-    const txId = track(lockTxCreator, account, 'Depositing MKR', {
+    const txId = track(lockTxCreator, account, 'Depositing GSUp', {
       pending: () => {
         if (typeof callbacks?.pending === 'function') callbacks.pending();
       },
       mined: txId => {
-        transactionsApi.getState().setMessage(txId, 'MKR deposited');
+        transactionsApi.getState().setMessage(txId, 'GSUp deposited');
         if (typeof callbacks?.mined === 'function') callbacks.mined();
       },
       error: txId => {
-        transactionsApi.getState().setMessage(txId, 'MKR deposit failed');
+        transactionsApi.getState().setMessage(txId, 'GSUp deposit failed');
         if (typeof callbacks?.error === 'function') callbacks.error();
       }
     });

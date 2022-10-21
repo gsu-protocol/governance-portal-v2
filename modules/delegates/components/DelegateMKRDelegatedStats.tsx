@@ -44,7 +44,7 @@ export function DelegateMKRDelegatedStats({
             'Untracked'
           )
         }
-        label={'Total MKR Delegated'}
+        label={'Total GSUp Delegated'}
         tooltip={
           <Tooltip label={getDescription({ votingWeight, isDelegate: true })}>
             <Box>
@@ -60,7 +60,7 @@ export function DelegateMKRDelegatedStats({
       {account && (
         <StatBox
           value={typeof mkrStaked !== 'undefined' ? formatValue(mkrStaked) : '0'}
-          label={'MKR delegated by you'}
+          label={'GSUp delegated by you'}
         />
       )}
     </Flex>

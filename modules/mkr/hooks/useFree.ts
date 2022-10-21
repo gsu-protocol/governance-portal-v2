@@ -32,16 +32,16 @@ export const useFree = (): FreeResponse => {
       ? () => voteProxyContract.free(mkrToWithdraw)
       : () => chief.free(mkrToWithdraw);
 
-    const transactionId = track(freeTxCreator, account, 'Withdrawing MKR', {
+    const transactionId = track(freeTxCreator, account, 'Withdrawing GSUp', {
       pending: () => {
         if (typeof callbacks?.pending === 'function') callbacks.pending();
       },
       mined: txId => {
-        transactionsApi.getState().setMessage(txId, 'MKR withdrawn');
+        transactionsApi.getState().setMessage(txId, 'GSUp withdrawn');
         if (typeof callbacks?.mined === 'function') callbacks.mined();
       },
       error: txId => {
-        transactionsApi.getState().setMessage(txId, 'MKR withdraw failed');
+        transactionsApi.getState().setMessage(txId, 'GSUp withdraw failed');
         if (typeof callbacks?.error === 'function') callbacks.error();
       }
     });

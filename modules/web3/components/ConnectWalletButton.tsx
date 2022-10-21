@@ -44,9 +44,9 @@ export default function ConnectWalletButton({ onClickConnect, address, pending }
         ) : (
           <Flex sx={{ alignItems: 'center', mr: 2 }}>
             <Box sx={{ mr: 2 }}>
-              <AddressIcon address={address} width={22} />
+              <AddressIcon address={address} width={14} />
             </Box>
-            <Text sx={{ fontFamily: 'body' }} data-testid="connected-address">
+            <Text sx={{ fontFamily: 'body', fontSize: ['10px', '12px'] }} data-testid="connected-address">
               <Address address={address} />
             </Text>
           </Flex>

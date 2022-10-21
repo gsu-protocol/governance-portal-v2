@@ -53,12 +53,12 @@ const ParticipationChart = ({
     return (
       <Box>
         {monthMKR && <Text as="p">{format(new Date(monthMKR.blockTimestamp), 'LLL yyyy')}</Text>}
-        {monthMKR && <Text as="p">{commify(parseInt(monthMKR.lockTotal).toFixed(0))} MKR</Text>}
+        {monthMKR && <Text as="p">{commify(parseInt(monthMKR.lockTotal).toFixed(0))} GSUp</Text>}
       </Box>
     );
   };
 
-  const formatLegend = () => <span sx={{ color: 'onSurface' }}>MKR Locked in Chief</span>;
+  const formatLegend = () => <span sx={{ color: 'onSurface' }}>GSUp Locked in Chief</span>;
 
   return (
     <ResponsiveContainer width={'100%'} minHeight={200}>
@@ -88,7 +88,7 @@ const ParticipationChart = ({
           label={{
             fill: get(theme, 'colors.onSurface'),
             position: 'bottom',
-            value: 'MKR',
+            value: 'GSUp',
             offset: 9
           }}
           domain={['dataMin', 'dataMax']}

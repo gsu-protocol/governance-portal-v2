@@ -30,7 +30,7 @@ export class ErrorBoundary extends React.Component<{ componentName: string }> {
             There was a problem loading {this.componentName}. Please reload the application or contact our
             team on{' '}
             <ExternalLink
-              href="https://discord.gg/tQ5wnN6Ms4"
+              href="https://discord.com/invite/cm3tmM37W3"
               title="Discord"
               styles={{ color: 'accentBlue' }}
             >

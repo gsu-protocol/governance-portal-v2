@@ -2,9 +2,9 @@
 import { ParsedSpockVote } from 'modules/polling/types/tallyVotes';
 import BigNumber from 'lib/bigNumberJs';
 
-// Determines the winner of a majority algorithm. The percent is a number between 0-100 and it determines that the winner has to have more than "percent" of the MKR.
+// Determines the winner of a majority algorithm. The percent is a number between 0-100 and it determines that the winner has to have more than "percent" of the GSUp.
 export function extractWinnerMajority(currentVotes: ParsedSpockVote[], percent: number): number | null {
-  // Group votes by MKR support, remember that each vote has a ballot with possible many multiple options
+  // Group votes by GSUp support, remember that each vote has a ballot with possible many multiple options
   const votes: { [key: number]: BigNumber } = {};
   let totalMKR = new BigNumber(0);
 
@@ -20,7 +20,7 @@ export function extractWinnerMajority(currentVotes: ParsedSpockVote[], percent: 
     });
   });
 
-  // Sort options by MKR support
+  // Sort options by GSUp support
   const sortedOptions = Object.keys(votes)
     .map(option => {
       return {

@@ -28,7 +28,7 @@ export const useEsmShutdown = (): ShutdownResponse => {
 
   const shutdown = callbacks => {
     const shutdownTxCreator = () => esm.fire();
-    const txId = track(shutdownTxCreator, account, 'Shutting Down Dai Credit System', {
+    const txId = track(shutdownTxCreator, account, 'Shutting Down GSUc Credit System', {
       initialized: () => {
         if (typeof callbacks?.initialized === 'function') callbacks.initialized();
       },
@@ -36,7 +36,7 @@ export const useEsmShutdown = (): ShutdownResponse => {
         if (typeof callbacks?.pending === 'function') callbacks.pending();
       },
       mined: txId => {
-        transactionsApi.getState().setMessage(txId, 'Dai Credit System has been Shutdown');
+        transactionsApi.getState().setMessage(txId, 'GSUc Credit System has been Shutdown');
         if (typeof callbacks?.mined === 'function') callbacks.mined();
       },
       error: () => {

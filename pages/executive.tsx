@@ -191,12 +191,12 @@ export const ExecutiveOverview = ({ proposals }: { proposals?: Proposal[] }): JS
             >
               <Text sx={{ py: 2 }}>
                 An executive vote has passed to update the Chief to a new version. You have{' '}
-                <b>{formatValue(lockedMkrOldChief)} MKR</b> to withdraw from the old chief.
+                <b>{formatValue(lockedMkrOldChief)} GSUp</b> to withdraw from the old chief.
               </Text>
               <Flex>
                 <WithdrawOldChief />
                 <ExternalLink
-                  href="https://forum.makerdao.com/t/dschief-v1-2-migration-steps/5412"
+                  href="https://forum.gsuprotocol.io/t/dschief-v1-2-migration-steps/5412"
                   title="View migration steps"
                 >
                   <Button
@@ -259,7 +259,7 @@ export const ExecutiveOverview = ({ proposals }: { proposals?: Proposal[] }): JS
         lockedMkr.gt(0) && (
           <>
             <ProgressBar step={2} />
-            <MigrationBadge>Your MKR has been deposited. You are now ready to vote.</MigrationBadge>
+            <MigrationBadge>Your GSUp has been deposited. You are now ready to vote.</MigrationBadge>
           </>
         )}
       <Stack>
@@ -280,7 +280,7 @@ export const ExecutiveOverview = ({ proposals }: { proposals?: Proposal[] }): JS
           {(startDate || endDate) && !isValidating && (
             <Button
               variant={'outline'}
-              sx={{ ml: 3 }}
+              sx={{ ml: 3, p: ['5px 10px', '8px'], fontSize: ['10px', '12px'] }}
               onClick={resetExecutiveFilters}
               data-testid="executive-reset-filters"
             >
@@ -420,15 +420,15 @@ export const ExecutiveOverview = ({ proposals }: { proposals?: Proposal[] }): JS
               <SystemStatsSidebar
                 fields={[
                   'chief contract',
-                  'mkr in chief',
-                  'mkr needed to pass',
+                  'GSUp in chief',
+                  'GSUp needed to pass',
                   'savings rate',
-                  'total dai',
+                  'total GSUc',
                   'debt ceiling'
                 ]}
               />
             </ErrorBoundary>
-            <ErrorBoundary componentName="MKR Liquidity">
+            <ErrorBoundary componentName="GSUp Liquidity">
               <MkrLiquiditySidebar network={network} />
             </ErrorBoundary>
             <ResourceBox type={'executive'} />

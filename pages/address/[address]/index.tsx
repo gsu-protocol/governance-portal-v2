@@ -37,7 +37,7 @@ const AddressView = ({ addressInfo }: { addressInfo: AddressApiResponse }) => {
         } Information`}
         description={`See all the voting activity of ${
           addressInfo.delegateInfo?.name || addressInfo.address
-        } in Maker Governance. `}
+        } in GSU protocol Governance. `}
         image={addressInfo.delegateInfo?.picture}
       />
 
@@ -72,13 +72,13 @@ const AddressView = ({ addressInfo }: { addressInfo: AddressApiResponse }) => {
         </Stack>
         <Stack gap={3}>
           {addressInfo.isDelegate && addressInfo.delegateInfo && (
-            <ErrorBoundary componentName="Delegate MKR">
+            <ErrorBoundary componentName="Delegate GSUp">
               <ManageDelegation delegate={addressInfo.delegateInfo} />
             </ErrorBoundary>
           )}
           <ErrorBoundary componentName="System Info">
             <SystemStatsSidebar
-              fields={['polling contract', 'savings rate', 'total dai', 'debt ceiling', 'system surplus']}
+              fields={['polling contract', 'savings rate', 'total GSUc', 'debt ceiling', 'system surplus']}
             />
           </ErrorBoundary>
           {addressInfo.isDelegate && <ResourceBox type={'delegates'} />}

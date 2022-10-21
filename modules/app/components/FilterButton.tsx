@@ -13,7 +13,12 @@ export default function FilterButton({
   return (
     <Menu>
       <MenuButton
-        sx={{ variant: active ? 'buttons.primaryOutline' : 'buttons.outline', lineHeight: 'inherit' }}
+        sx={{
+          variant: active ? 'buttons.primaryOutline' : 'buttons.outline',
+          lineHeight: 'inherit',
+          padding: ['5px 10px', '8px'],
+          fontSize: ['10px', '12px']
+        }}
         {...props}
       >
         {name()}

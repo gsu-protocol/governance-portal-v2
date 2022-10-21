@@ -89,7 +89,7 @@ export const UndelegateModal = ({
                   tx={tx}
                   setTxId={resetTx}
                   onDismiss={onClose}
-                  title={'Undelegating MKR'}
+                  title={'Undelegating GSUp'}
                   description={`You undelegated ${formatValue(mkrToWithdraw, 'wad', 6)} from ${
                     delegate.name
                   }`}
@@ -103,10 +103,10 @@ export const UndelegateModal = ({
                   {mkrStaked && iouAllowance ? (
                     <InputDelegateMkr
                       title="Withdraw from delegate contract"
-                      description="Input the amount of MKR to withdraw from the delegate contract."
+                      description="Input the amount of GSUp to withdraw from the delegate contract."
                       onChange={setMkrToWithdraw}
                       balance={mkrStaked}
-                      buttonLabel="Undelegate MKR"
+                      buttonLabel="Undelegate GSUp"
                       onClick={() => {
                         free(mkrToWithdraw, {
                           mined: () => {
@@ -129,7 +129,7 @@ export const UndelegateModal = ({
                       title={'Approve Delegate Contract'}
                       buttonLabel={'Approve Delegate Contract'}
                       description={
-                        'Approve the transfer of IOU tokens to the delegate contract to withdraw your MKR.'
+                        'Approve the transfer of IOU tokens to the delegate contract to withdraw your GSUp.'
                       }
                     />
                   )}

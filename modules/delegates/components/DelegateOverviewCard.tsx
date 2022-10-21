@@ -233,7 +233,7 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
                       color="onSecondary"
                       sx={{ textAlign: 'right', fontSize: [1, 2, 3] }}
                     >
-                      MKR delegated by you
+                      GSUp delegated by you
                     </Text>
                   </Box>
                 )}
@@ -252,7 +252,7 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
                     color="onSecondary"
                     sx={{ textAlign: 'right', fontSize: [1, 2, 3] }}
                   >
-                    Total MKR delegated
+                    Total GSUp delegated
                   </Text>
                 </Box>
               </Flex>

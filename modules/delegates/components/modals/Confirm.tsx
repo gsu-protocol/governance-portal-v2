@@ -23,7 +23,7 @@ export const ConfirmContent = ({ mkrToDeposit, delegate, onClick, onBack }: Prop
       </Text>
       <Text sx={{ mt: 4 }}>
         You are delegating{' '}
-        <Text sx={{ fontWeight: 'bold', display: 'inline' }}>{formatValue(mkrToDeposit, 'wad', 6)} MKR</Text>{' '}
+        <Text sx={{ fontWeight: 'bold', display: 'inline' }}>{formatValue(mkrToDeposit, 'wad', 6)} GSUp</Text>{' '}
         to delegate contract{' '}
         <ExternalLink
           title="View on etherescan"

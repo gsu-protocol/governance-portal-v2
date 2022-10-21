@@ -49,7 +49,7 @@ export default function PollVotedOption({
             </Text>
             {votingWeight && (
               <Text color="onSecondary" sx={{ fontSize: 2 }}>
-                &nbsp;with {votingWeight ? `${formatValue(votingWeight)} MKR` : '--'}
+                &nbsp;with {votingWeight ? `${formatValue(votingWeight)} GSUp` : '--'}
               </Text>
             )}
           </Flex>

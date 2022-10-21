@@ -43,7 +43,7 @@ function getRandomNumber(max: number): number {
 }
 
 export function getTestAccount(): TestAccount {
-  // We only have seeded the first 50 accounts with 0.5 ETH and 0.01 MKR
+  // We only have seeded the first 50 accounts with 0.5 ETH and 0.01 GSUp
   const MAX_ACCOUNT = 50;
   let number = getRandomNumber(MAX_ACCOUNT);
 

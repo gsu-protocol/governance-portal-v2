@@ -41,12 +41,12 @@ export function DelegatesSystemInfo({
       value: stats.shadow
     },
     {
-      title: 'Total MKR delegated',
+      title: 'Total GSUp delegated',
       id: 'total-mkr-system-info',
       value: new BigNumber(stats.totalMKRDelegated).toFormat(0)
     },
     {
-      title: 'Percent of MKR delegated',
+      title: 'Percent of GSUp delegated',
       id: 'percent-mkr-system-info',
       value: totalMkr ? (
         `${new BigNumber(stats.totalMKRDelegated)

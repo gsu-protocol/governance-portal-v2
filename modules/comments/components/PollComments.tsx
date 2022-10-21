@@ -37,7 +37,7 @@ export default function PollComments({
     return tallyVote;
   };
 
-  // Merge comments with voting weight from the tally. Used for sorting by MKR weight and representation
+  // Merge comments with voting weight from the tally. Used for sorting by GSUp weight and representation
   const mergedComments: PollCommentsAPIResponseItemWithWeight[] = useMemo(() => {
     if (!comments) {
       return [];
@@ -129,7 +129,7 @@ export default function PollComments({
                 fontWeight: commentSortBy === CommentSortOption.MKR_AMOUNT ? 'bold' : undefined
               }}
             >
-              MKR Amount
+              GSUp Amount
             </MenuItem>
           </FilterButton>
         </Box>

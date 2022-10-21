@@ -17,7 +17,7 @@ const ForumPosts = ({ posts, bpi }: { posts: ForumPost[]; bpi: number }) => {
     <Flex sx={{ flexDirection: 'column', gap: 3 }}>
       <Flex sx={{ justifyContent: 'space-between' }}>
         <Heading>Browse the Governance Forum</Heading>
-        <ExternalLink href="https://forum.makerdao.com/" title="View Forum Posts" target="_blank">
+        <ExternalLink href="https://forum.gsuprotocol.io/" title="View Forum Posts" target="_blank">
           <ViewMore label="View Forum" />
         </ExternalLink>
       </Flex>
@@ -89,7 +89,7 @@ export default function Participation({
         <Stack gap={2}>
           <Heading as="h2">Follow the Conversation and Participate</Heading>
           <Text as="p" sx={{ color: 'textSecondary', px: 'inherit', fontSize: [2, 4] }}>
-            Engage with the Maker Community and make informed decisions.
+            Engage with the GSU protocol Community and make informed decisions.
           </Text>
         </Stack>
       </Container>
@@ -132,7 +132,7 @@ export default function Participation({
             <Flex sx={{ justifyContent: 'space-between' }}>
               <Heading>Top Voters</Heading>
               <ExternalLink
-                href="https://governance-metrics-dashboard.vercel.app/"
+                href="https://governance-metrics-dashboard.gsuprotocol.io/"
                 title="View More Metrics"
                 target="_blank"
               >

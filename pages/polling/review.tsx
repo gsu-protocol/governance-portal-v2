@@ -97,18 +97,18 @@ const PollingReview = ({ polls }: PollingReviewPageData) => {
       const poll = previousVotedPolls.find(poll => poll.pollId === modalPollId);
       if (!poll) return '';
       const option = poll.options[previousBallot[poll.pollId].option as number];
-      url = `https://vote.makerdao.com/polling/${poll.slug}`;
+      url = `https://vote.gsuprotocol.io/polling/${poll.slug}`;
       text = `I just voted ${
         option ? option + ' ' : ''
       }on a MakerDAO governance poll! Learn more about the poll on the Governance Portal:`;
     } else {
       // all votes
-      url = 'https://vote.makerdao.com';
+      url = 'https://vote.gsuprotocol.io';
       text = `I just voted on ${
         previousVotesLength > 1 ? previousVotesLength : 'a'
       } MakerDAO governance poll${
         previousVotesLength > 1 ? 's' : ''
-      }! Find my votes and all Maker governance proposals on the Governance Portal:`;
+      }! Find my votes and all GSU protocol governance proposals on the Governance Portal:`;
     }
 
     return (
@@ -145,7 +145,7 @@ const PollingReview = ({ polls }: PollingReviewPageData) => {
         option = markdownArray.reduce((previousValue, currentValue) => previousValue + currentValue);
       }
       const comment = previousBallot[poll.pollId]?.comment;
-      markdown += `[${poll.title}](https://vote.makerdao.com/polling/${poll.slug}) ([thread](${poll.discussionLink}))  \n`;
+      markdown += `[${poll.title}](https://vote.gsuprotocol.io/polling/${poll.slug}) ([thread](${poll.discussionLink}))  \n`;
       if (option) markdown += `Voted: ${option}  \n`;
       markdown += comment ? `Reasoning: ${comment}  \n` : '  \n';
       markdown += '  \n';

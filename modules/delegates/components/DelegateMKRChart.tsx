@@ -65,7 +65,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
     return (
       <Box>
         {monthMKR && <Text as="p">{formatXAxis(monthMKR.date)}</Text>}
-        <Text as="p">MKR Weight: {new BigNumber(monthMKR?.MKR || 0).toFormat(2)}</Text>
+        <Text as="p">GSUp Weight: {new BigNumber(monthMKR?.MKR || 0).toFormat(2)}</Text>
       </Box>
     );
   }
@@ -103,7 +103,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
             Voting Weight
           </Text>
           <Text as="p" variant="secondary" color="onSurface">
-            MKR delegated over time
+            GSUp delegated over time
           </Text>
         </Box>
         <Box>
@@ -183,7 +183,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
             }}
           />
           <Text variant="secondary" color="onSurface">
-            MKR delegated to this delegate
+            GSUp delegated to this delegate
           </Text>
         </Box>
       </Box>
