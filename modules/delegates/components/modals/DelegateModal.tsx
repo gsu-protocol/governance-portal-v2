@@ -49,12 +49,11 @@ export const DelegateModal = ({
 
   const { data: mkrBalance, mutate: mutateMkrBalance } = useMkrBalance(account);
 
-  const { data: mkrAllowance, mutate: mutateTokenAllowance } = useTokenAllowance(
-    Tokens.MKR,
-    parseUnits('100000000'),
-    account,
-    voteDelegateAddress
-  );
+  const {
+    isValidating: mkrAllowanceLoading,
+    data: mkrAllowance,
+    mutate: mutateTokenAllowance
+  } = useTokenAllowance(Tokens.MKR, parseUnits('100000000'), account, voteDelegateAddress);
 
   const { approve, tx: approveTx, setTxId: resetApprove } = useApproveUnlimitedToken(Tokens.MKR);
 
@@ -72,6 +71,8 @@ export const DelegateModal = ({
     // Reset the confirmation step
     setConfirmStep(false);
   }, [isOpen]);
+
+  console.log('mkrAllowanceLoading', mkrAllowanceLoading);
 
   return (
     <>
@@ -114,7 +115,7 @@ export const DelegateModal = ({
                 </TxDisplay>
               ) : (
                 <>
-                  {mkrAllowance ? (
+                  {mkrAllowanceLoading ? null : mkrAllowance ? (
                     confirmStep ? (
                       <ConfirmContent
                         mkrToDeposit={mkrToDeposit}

@@ -21,9 +21,9 @@ const resources: Record<ResourceType, Resource> = {
       { linkTitle: 'Governance FAQs', url: 'https://gsuprotocol.world/learn/governance/governance-faq/' },
       {
         linkTitle: 'Governance Risk Framework',
-        url: 'https://blog.gsuprotocol.io/makerdao-governance-risk-framework/'
+        url: 'https://blog.gsuprotocol.io/gsu-protocol-governance-risk-framework/'
       },
-      { linkTitle: 'Awesome GSU protocol', url: 'https://github.com/gsu-protocol/awesome-makerdao/' },
+      { linkTitle: 'Awesome GSU protocol', url: 'https://github.com/gsu-protocol/awesome-gsu-protocol/' },
       {
         linkTitle: 'Governance Call Schedule',
         url: 'https://gsuprotocol.world/resources/governance_and_risk_meetings/'

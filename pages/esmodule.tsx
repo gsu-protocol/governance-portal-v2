@@ -170,8 +170,8 @@ const ESModule = (): React.ReactElement => {
           }}
         >
           <Text data-testid="es-initiated" sx={{ textAlign: 'center' }}>
-            Emergency shutdown has been initiated on {formatDateWithTime(cageTime.toNumber())}. This dashboard
-            is currently read-only. You can read more information about next steps{' '}
+            Emergency shutdown has been initiated on {formatDateWithTime(cageTime.toNumber() * 1000)}. This
+            dashboard is currently read-only. You can read more information about next steps{' '}
             <ExternalLink
               href="https://gsuprotocol.world/en/learn/governance/emergency-shutdown"
               title="Learn about emergency shutdown"

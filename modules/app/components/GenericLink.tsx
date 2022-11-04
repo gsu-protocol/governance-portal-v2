@@ -1,3 +1,4 @@
+import theme from 'lib/theme';
 import { ExternalLink } from './ExternalLink';
 import { InternalLink } from './InternalLink';
 
@@ -13,7 +14,7 @@ export const GenericLink: React.FC<{
     );
   } else {
     return (
-      <InternalLink href={href} title={title}>
+      <InternalLink href={href} title={title} styles={{ color: theme.colors.accentBlue }}>
         <> {children}</>
       </InternalLink>
     );

@@ -14,7 +14,7 @@ const DefaultScreen = ({ setShowDialog, setStep }: Props): JSX.Element => (
       Are you sure you want to burn GSUp?
     </Text>
     <Text variant="text" sx={{ mt: 3, textAlign: 'center' }}>
-      By burning your GSUp in the ESM, you are contributing to the shutdown of the Dai Credit System. Your
+      By burning your GSUp in the ESM, you are contributing to the shutdown of the GSUc Credit System. Your
       GSUp will be immediately burned and cannot be retrieved.
     </Text>
     <Grid columns={2} mt={4}>

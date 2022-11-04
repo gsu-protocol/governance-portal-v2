@@ -43,7 +43,7 @@ export function DelegatesSystemInfo({
     {
       title: 'Total GSUp delegated',
       id: 'total-mkr-system-info',
-      value: new BigNumber(stats.totalMKRDelegated).toFormat(0)
+      value: new BigNumber(stats.totalMKRDelegated).toFormat(1)
     },
     {
       title: 'Percent of GSUp delegated',

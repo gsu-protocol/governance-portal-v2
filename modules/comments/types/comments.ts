@@ -102,5 +102,5 @@ export type CommentFromDB = PollCommentFromDB | ExecutiveCommentFromDB;
 export enum CommentSortOption {
   LATEST = 'latest',
   OLDEST = 'oldest',
-  MKR_AMOUNT = 'MKR amount'
+  MKR_AMOUNT = 'GSUp amount'
 }
