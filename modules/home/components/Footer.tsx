@@ -4,6 +4,7 @@ import { ExternalLink } from 'modules/app/components/ExternalLink';
 import React from 'react';
 import { translate } from '@makerdao/i18n-helper';
 import { useBreakpointIndex } from '@theme-ui/match-media';
+import { GenericLink } from 'modules/app/components/GenericLink';
 
 const ContactSection = ({ heading, logos, icon }) => {
   return (
@@ -33,7 +34,7 @@ const ContactSection = ({ heading, logos, icon }) => {
           </ExternalLink>
         ))}
       </Flex>
-      <Icon name={icon} size={4} sx={{ my: [0, 0, 4] }} />
+      <Icon name={icon} size={'130px'} sx={{ my: [0, 0, 4] }} />
     </Flex>
   );
 };
@@ -49,57 +50,57 @@ export default function Footer({ locale = 'en' }: { locale?: string }): React.Re
       header: t('Governance'),
       list: [
         {
-          url: 'https://forum.makerdao.com/',
+          url: 'https://forum.gsuprotocol.io/',
           title: t('Forum')
         },
         {
-          url: 'https://manual.makerdao.com/',
+          url: 'https://manual.gsuprotocol.io/',
           title: t('Operational Manual')
         },
         {
-          url: 'https://makerdao.world/en/learn/governance/',
+          url: 'https://gsuprotocol.world/en/learn/governance/',
           title: t('Governance FAQs')
-        },
-        {
-          url: 'https://docs.google.com/spreadsheets/d/1LWNlv6hr8oXebk8rvXZBPRVDjN-3OrzI0IgLwBVk0vM/edit#gid=0',
-          title: t('Gov Tracking Sheet')
-        },
-        {
-          url: 'https://manual.makerdao.com/governance/governance-cycle/monthly-governance-cycle',
-          title: t('Monthly Gov Cycle')
-        },
-        {
-          url: 'https://manual.makerdao.com/governance/governance-cycle/weekly-governance-cycle',
-          title: t('Weekly Gov Cycle')
         }
+        // {
+        //   url: 'https://docs.google.com/spreadsheets/d/1LWNlv6hr8oXebk8rvXZBPRVDjN-3OrzI0IgLwBVk0vM/edit#gid=0',
+        //   title: t('Gov Tracking Sheet')
+        // },
+        // {
+        //   url: 'https://manual.gsuprotocol.io/governance/governance-cycle/monthly-governance-cycle',
+        //   title: t('Monthly Gov Cycle')
+        // },
+        // {
+        //   url: 'https://manual.gsuprotocol.io/governance/governance-cycle/weekly-governance-cycle',
+        //   title: t('Weekly Gov Cycle')
+        // }
       ]
     },
     {
       header: t('Products & Tools'),
       list: [
         {
-          url: 'https://makerdao.statuspage.io/',
+          url: 'https://statuspage.gsuprotocol.io/',
           title: t('Service Status')
         },
 
         {
-          url: 'https://auctions.makerdao.network/',
+          url: 'https://unified-auctions.gsuprotocol.io/',
           title: t('Auctions Dashboard')
         },
+        // {
+        //   url: 'https://migrate.gsuprotocol.io/',
+        //   title: t('Migrate Dashboard')
+        // },
+        // {
+        //   url: 'https://makerburn.com/',
+        //   title: t('MakerBurn')
+        // },
         {
-          url: 'https://migrate.makerdao.com/',
-          title: t('Migrate Dashboard')
+          url: 'https://gsustats.gsuprotocol.io',
+          title: t('GSUc Stats')
         },
         {
-          url: 'https://makerburn.com/',
-          title: t('MakerBurn')
-        },
-        {
-          url: 'https://daistats.com/',
-          title: t('DAI Stats')
-        },
-        {
-          url: 'https://vote.makerdao.com/terms',
+          url: '/terms',
           title: t('Terms')
         }
       ]
@@ -108,27 +109,27 @@ export default function Footer({ locale = 'en' }: { locale?: string }): React.Re
       header: t('Developer'),
       list: [
         {
-          url: 'https://makerdao.com/whitepaper',
+          url: 'https://www.gsuprotocol.io/_files/ugd/552241_f8b3211df20c463e85d8f292a06944f4.pdf',
           title: t('Whitepaper')
         },
         {
-          url: 'https://docs.makerdao.com/',
+          url: 'https://docs.gsuprotocol.io/',
           title: t('Technical Docs')
         },
         {
-          url: 'https://vote.makerdao.com/api-docs',
+          url: '/api-docs',
           title: t('API Docs')
         },
         {
-          url: 'https://github.com/makerdao/developerguides',
+          url: 'https://github.com/gsu-protocol/developerguides',
           title: t('Developer Guides')
         },
         {
-          url: 'https://www.notion.so/makerdao/Maker-Brand-ac517c82ff9a43089d0db5bb2ee045a4',
+          url: 'https://linktr.ee/gsucoin',
           title: t('Brand Assets')
         },
         {
-          url: 'https://makerdao.com/en/feeds/',
+          url: 'https://gsuprotocol.io/en/feeds/',
           title: t('Oracle Feeds')
         }
       ]
@@ -137,18 +138,18 @@ export default function Footer({ locale = 'en' }: { locale?: string }): React.Re
 
   const logos = {
     makerdao: [
-      { title: 'Discord', url: 'https://chat.makerdao.com', icon: 'discord' },
-      { title: 'Twitter', url: 'https://twitter.com/MakerDAO', icon: 'twitter' },
-      { title: 'Reddit', url: 'https://www.reddit.com/r/MakerDAO/', icon: 'reddit' },
-      { title: 'YouTube', url: 'https://www.youtube.com/MakerDAO', icon: 'youtube' },
-      { title: 'GitHub', url: 'https://www.github.com/makerdao', icon: 'github' }
+      { title: 'Discord', url: 'https://discord.com/invite/cm3tmM37W3', icon: 'discord' },
+      { title: 'Twitter', url: 'https://twitter.com/gsucoin', icon: 'twitter' },
+      // { title: 'Reddit', url: 'https://www.reddit.com/r/MakerDAO/', icon: 'reddit' },
+      // { title: 'YouTube', url: 'https://www.youtube.com/MakerDAO', icon: 'youtube' },
+      { title: 'GitHub', url: 'https://www.github.com/gsu-protocol', icon: 'github' }
     ],
     makerdux: [
-      { title: 'Discord', url: 'https://discord.gg/GHcFMdKden', icon: 'discord' },
-      { title: 'Twitter', url: 'https://twitter.com/MakerDUX', icon: 'twitter' },
-      { title: 'GitHub', url: 'https://github.com/makerdao/governance-portal-v2', icon: 'github' },
-      { title: 'Canny', url: 'https://makergovernance.canny.io/', icon: 'canny' },
-      { title: 'Immunefi', url: 'https://immunefi.com/bounty/makerdao/', icon: 'immunefi' }
+      // { title: 'Discord', url: 'https://discord.gg/GHcFMdKden', icon: 'discord' },
+      // { title: 'Twitter', url: 'https://twitter.com/MakerDUX', icon: 'twitter' },
+      // { title: 'GitHub', url: 'https://github.com/gsu-protocol/governance-portal-v2', icon: 'github' },
+      // { title: 'Canny', url: 'https://makergovernance.canny.io/', icon: 'ca      nny' },
+      // { title: 'Immunefi', url: 'https://immunefi.com/bounty/makerdao/', icon: 'immunefi' }
     ]
   };
 
@@ -205,16 +206,16 @@ export default function Footer({ locale = 'en' }: { locale?: string }): React.Re
                 </Text>
                 {group.list.map(({ url, title }) => {
                   return (
-                    <ExternalLink key={title} href={url} title={title} styles={{ fontSize: [1, 2] }}>
+                    <GenericLink key={title} href={url} title={title}>
                       <Text>{title}</Text>
-                    </ExternalLink>
+                    </GenericLink>
                   );
                 })}
               </Flex>
             );
           })}
         </Flex>
-        <ContactSection heading="Development & UX Channels" icon="makerdux" logos={logos.makerdux} />
+        {/* <ContactSection heading="Development & UX Channels" icon="makerdux" logos={logos.makerdux} /> */}
       </Flex>
     </div>
   );

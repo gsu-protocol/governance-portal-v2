@@ -72,7 +72,7 @@ const CollapsableRow = ({ delegate, network, bpi, totalDelegated }: CollapsableR
       </Flex>
       <Box as="td" sx={{ verticalAlign: 'top', pt: 2 }}>
         <Text sx={{ fontSize: bpi < 1 ? 1 : 3 }}>
-          {`${formatValue(parseUnits(lockAmount), undefined, undefined, true)}${bpi > 0 ? ' MKR' : ''}`}
+          {`${formatValue(parseUnits(lockAmount), undefined, undefined, true)}${bpi > 0 ? ' GSUp' : ''}`}
         </Text>
         {expanded && (
           <Flex sx={{ flexDirection: 'column' }}>
@@ -94,7 +94,7 @@ const CollapsableRow = ({ delegate, network, bpi, totalDelegated }: CollapsableR
                   <Text key={blockTimestamp} variant="smallCaps" sx={{ pl: 2 }}>
                     {`${formatValue(
                       parseUnits(lockAmount.indexOf('-') === 0 ? lockAmount.substring(1) : lockAmount)
-                    )}${bpi > 0 ? ' MKR' : ''}`}
+                    )}${bpi > 0 ? ' GSUp' : ''}`}
                   </Text>
                 </Flex>
               );
@@ -195,10 +195,10 @@ const AddressDelegatedTo = ({ delegatedTo, totalDelegated }: AddressDelegatedToP
               Address
             </Text>
             <Text as="th" sx={{ textAlign: 'left', pb: 2, width: bpi > 1 ? '20%' : '25%' }} variant="caps">
-              MKR Delegated
+              GSUp Delegated
             </Text>
             <Text as="th" sx={{ textAlign: 'left', pb: 2, width: bpi > 1 ? '20%' : '25%' }} variant="caps">
-              <Tooltip label={'This is the percentage of the total MKR delegated by this address.'}>
+              <Tooltip label={'This is the percentage of the total GSUp delegated by this address.'}>
                 <span>Voting Weight</span>
               </Tooltip>
             </Text>

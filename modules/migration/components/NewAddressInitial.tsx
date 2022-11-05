@@ -92,7 +92,11 @@ export function NewAddressInitial({
       <Flex sx={{ alignItems: 'center', mt: 2 }}>
         <Text variant="secondary">
           Please reach out to us on{' '}
-          <ExternalLink href="https://discord.gg/GHcFMdKden" title="Discord" styles={{ color: 'accentBlue' }}>
+          <ExternalLink
+            href="https://discord.com/invite/cm3tmM37W3"
+            title="Discord"
+            styles={{ color: 'accentBlue' }}
+          >
             <Text>Discord</Text>
           </ExternalLink>{' '}
           if you have additional questions.

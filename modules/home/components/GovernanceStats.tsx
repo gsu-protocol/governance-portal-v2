@@ -18,8 +18,8 @@ export function GovernanceStats({ polls, stats, mkrOnHat, mkrInChief }: Props): 
 
   const infoUnits = [
     {
-      title: 'MKR on Hat',
-      value: mkrOnHat ? `${mkrOnHat} MKR` : <Skeleton />
+      title: 'GSUp on Hat',
+      value: mkrOnHat ? `${mkrOnHat} GSUp` : <Skeleton />
     },
     {
       title: 'Active Polls',
@@ -34,12 +34,12 @@ export function GovernanceStats({ polls, stats, mkrOnHat, mkrInChief }: Props): 
       value: stats ? stats.shadow.toString() : <Skeleton />
     },
     {
-      title: 'MKR Delegated',
-      value: stats ? `${new BigNumberJS(stats.totalMKRDelegated).toFormat(0)} MKR` : <Skeleton />
+      title: 'GSUp Delegated',
+      value: stats ? `${new BigNumberJS(stats.totalMKRDelegated).toFormat(0)} GSUp` : <Skeleton />
     },
     {
-      title: 'MKR in Chief',
-      value: mkrInChief ? `${mkrInChief} MKR` : <Skeleton />
+      title: 'GSUp in Chief',
+      value: mkrInChief ? `${mkrInChief} GSUp` : <Skeleton />
     }
   ];
 
@@ -47,7 +47,7 @@ export function GovernanceStats({ polls, stats, mkrOnHat, mkrInChief }: Props): 
     <Stats
       title="Governance Stats"
       infoUnits={infoUnits}
-      viewMoreUrl="https://governance-metrics-dashboard.vercel.app/"
+      viewMoreUrl="https://governance-metrics-dashboard.gsuprotocol.io/"
     />
   );
 }

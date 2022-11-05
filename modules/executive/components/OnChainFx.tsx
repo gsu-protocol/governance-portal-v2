@@ -17,7 +17,7 @@ const Header = ({ stateDiff }) => (
             ).toFormat()}. `
           : 'Simulated effects if this spell were to be executed now.'}
         Please check the{' '}
-        <ExternalLink target="_blank" href="https://docs.makerdao.com">
+        <ExternalLink target="_blank" href="https://docs.gsuprotocol.io">
           MCD Docs
         </ExternalLink>{' '}
         for definitions.{' '}

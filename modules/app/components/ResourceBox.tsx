@@ -17,16 +17,16 @@ const resources: Record<ResourceType, Resource> = {
   general: {
     boxTitle: 'General Governance Resources',
     links: [
-      { linkTitle: 'Maker Forum', url: 'https://forum.makerdao.com/' },
-      { linkTitle: 'Governance FAQs', url: 'https://makerdao.world/learn/governance/governance-faq/' },
+      { linkTitle: 'GSU protocol Forum', url: 'https://forum.gsuprotocol.io/' },
+      { linkTitle: 'Governance FAQs', url: 'https://gsuprotocol.world/learn/governance/governance-faq/' },
       {
         linkTitle: 'Governance Risk Framework',
-        url: 'https://blog.makerdao.com/makerdao-governance-risk-framework/'
+        url: 'https://blog.gsuprotocol.io/gsu-protocol-governance-risk-framework/'
       },
-      { linkTitle: 'Awesome MakerDAO', url: 'https://github.com/makerdao/awesome-makerdao/' },
+      { linkTitle: 'Awesome GSU protocol', url: 'https://github.com/gsu-protocol/awesome-gsu-protocol/' },
       {
         linkTitle: 'Governance Call Schedule',
-        url: 'https://makerdao.world/resources/governance_and_risk_meetings/'
+        url: 'https://gsuprotocol.world/resources/governance_and_risk_meetings/'
       }
     ]
   },
@@ -34,20 +34,20 @@ const resources: Record<ResourceType, Resource> = {
     boxTitle: 'Polling FAQs',
     links: [
       {
-        linkTitle: 'How to participate in MakerDAO governance?',
-        url: 'https://makerdao.world/en/learn/governance/how-voting-works/'
+        linkTitle: 'How to participate in GSU protocol governance?',
+        url: 'https://gsuprotocol.world/en/learn/governance/how-voting-works/'
       },
       {
         linkTitle: 'What are Governance Polls?',
-        url: 'https://makerdao.world/en/learn/governance/how-voting-works#governance-polls'
+        url: 'https://gsuprotocol.world/en/learn/governance/how-voting-works#governance-polls'
       },
       {
         linkTitle: 'How is voting weight calculated?',
-        url: 'https://makerdao.world/en/learn/governance/how-voting-works#governance-polls-and-executive-votes'
+        url: 'https://gsuprotocol.world/en/learn/governance/how-voting-works#governance-polls-and-executive-votes'
       },
       {
         linkTitle: 'How to set up your wallet for voting?',
-        url: 'https://makerdao.world/en/learn/governance/voting-setup/'
+        url: 'https://gsuprotocol.world/en/learn/governance/voting-setup/'
       }
     ]
   },
@@ -55,24 +55,24 @@ const resources: Record<ResourceType, Resource> = {
     boxTitle: 'Executive Proposal FAQs',
     links: [
       {
-        linkTitle: 'How to participate in MakerDAO governance?',
-        url: 'https://makerdao.world/en/learn/governance/how-voting-works/'
+        linkTitle: 'How to participate in GSU protocol governance?',
+        url: 'https://gsuprotocol.world/en/learn/governance/how-voting-works/'
       },
       {
         linkTitle: 'What are Executive Votes?',
-        url: 'https://makerdao.world/en/learn/governance/how-voting-works#executive-votes'
+        url: 'https://gsuprotocol.world/en/learn/governance/how-voting-works#executive-votes'
       },
       {
         linkTitle: 'How to manually verify Executive Spells',
-        url: 'https://makerdao.world/en/learn/governance/audit-exec-spells'
+        url: 'https://gsuprotocol.world/en/learn/governance/audit-exec-spells'
       },
       {
         linkTitle: 'How is voting weight calculated?',
-        url: 'https://makerdao.world/en/learn/governance/how-voting-works#governance-polls-and-executive-votes'
+        url: 'https://gsuprotocol.world/en/learn/governance/how-voting-works#governance-polls-and-executive-votes'
       },
       {
         linkTitle: 'How to set up your wallet for voting?',
-        url: 'https://makerdao.world/en/learn/governance/voting-setup/'
+        url: 'https://gsuprotocol.world/en/learn/governance/voting-setup/'
       }
     ]
   },
@@ -80,24 +80,24 @@ const resources: Record<ResourceType, Resource> = {
     boxTitle: 'Delegation FAQs',
     links: [
       {
-        linkTitle: 'What is vote delegation and how does it work in MakerDAO?',
-        url: 'https://forum.makerdao.com/t/delegation-and-makerdao/9429'
+        linkTitle: 'What is vote delegation and how does it work in GSU protocol?',
+        url: 'https://forum.gsuprotocol.io/t/delegation-and-makerdao/9429'
       },
       {
         linkTitle: 'What are the requirements for becoming a recognized delegate?',
-        url: 'https://forum.makerdao.com/t/recognised-delegate-requirements/9421'
+        url: 'https://forum.gsuprotocol.io/t/recognised-delegate-requirements/9421'
       },
       {
-        linkTitle: "The MKR holder's guide to delegation",
-        url: 'https://forum.makerdao.com/t/mkr-holder-s-guide-to-delegation/9602'
+        linkTitle: "The GSUp holder's guide to delegation",
+        url: 'https://forum.gsuprotocol.io/t/mkr-holder-s-guide-to-delegation/9602'
       },
       {
-        linkTitle: "MKR token holder's delegation agreement",
-        url: 'https://forum.makerdao.com/t/token-holders-delegation-agreement/9385'
+        linkTitle: "GSUp token holder's delegation agreement",
+        url: 'https://forum.gsuprotocol.io/t/token-holders-delegation-agreement/9385'
       },
       {
         linkTitle: 'Recognized delegate code of conduct',
-        url: 'https://forum.makerdao.com/t/recognised-delegate-code-of-conduct/9384'
+        url: 'https://forum.gsuprotocol.io/t/recognised-delegate-code-of-conduct/9384'
       }
     ]
   }

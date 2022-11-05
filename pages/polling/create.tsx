@@ -217,10 +217,10 @@ const PollingCreate = (): React.ReactElement => {
               <SystemStatsSidebar
                 fields={[
                   'chief contract',
-                  'mkr in chief',
-                  'mkr needed to pass',
+                  'GSUp in chief',
+                  'GSUp needed to pass',
                   'savings rate',
-                  'total dai',
+                  'total GSUc',
                   'debt ceiling'
                 ]}
               />

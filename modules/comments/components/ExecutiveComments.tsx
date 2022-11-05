@@ -79,7 +79,7 @@ export default function ExecutiveComments({
                 fontWeight: commentSortBy === CommentSortOption.MKR_AMOUNT ? 'bold' : undefined
               }}
             >
-              MKR Amount
+              GSUp Amount
             </MenuItem>
           </FilterButton>
         </Box>

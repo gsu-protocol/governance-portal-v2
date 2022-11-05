@@ -16,8 +16,8 @@ export function DelegatesSortFilter(): JSX.Element {
           <ListboxOption label="Sort by default" value={delegatesSortEnum.random}>
             Default
           </ListboxOption>
-          <ListboxOption label="Sort by MKR delegated" value={delegatesSortEnum.mkrDelegated}>
-            MKR delegated
+          <ListboxOption label="Sort by GSUp delegated" value={delegatesSortEnum.mkrDelegated}>
+            GSUp delegated
           </ListboxOption>
           <ListboxOption label="Sort by creation date" value={delegatesSortEnum.creationDate}>
             Creation date

@@ -24,7 +24,7 @@ export function extractSatisfiesComparison(
   comparator: string,
   value: number
 ): number[] {
-  // Group votes by MKR support, remember that each vote has a ballot with possible many multiple options
+  // Group votes by GSUp support, remember that each vote has a ballot with possible many multiple options
   const votes: { [key: number]: BigNumber } = {};
 
   currentVotes.forEach(vote => {
@@ -37,7 +37,7 @@ export function extractSatisfiesComparison(
     });
   });
 
-  // Sort options by MKR support
+  // Sort options by GSUp support
   const sortedOptions = Object.keys(votes)
     .map(option => {
       return {

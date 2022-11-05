@@ -17,9 +17,9 @@ export function MigrationInfo({
     <Flex>
       <Flex sx={{ flexDirection: 'column' }}>
         <Text as="p" variant="secondary">
-          Maker delegate contracts are{' '}
+          GSU protocol delegate contracts are{' '}
           <ExternalLink
-            href="https://manual.makerdao.com/delegation/delegate-expiration 
+            href="https://manual.gsuprotocol.io/delegation/delegate-expiration 
 "
             title="Delegate expiration information"
           >
@@ -27,7 +27,8 @@ export function MigrationInfo({
               designed to expire annually
             </Text>
           </ExternalLink>{' '}
-          in order to protect the Maker protocol against stale MKR tokens participating in Maker governance.
+          in order to protect the GSU protocol against stale GSUp tokens participating in GSU protocol
+          governance.
         </Text>
 
         <Text as="p" variant="secondary" sx={{ mt: 3 }}>
@@ -36,7 +37,7 @@ export function MigrationInfo({
         </Text>
 
         <Text as="p" variant="secondary" sx={{ mt: 3 }}>
-          Completing the migration will also assist your delegators in migrating their MKR to your new
+          Completing the migration will also assist your delegators in migrating their GSUp to your new
           delegate contract address. Migration is not supported for Shadow Delegates, only for Recognized
           Delegates.
         </Text>
@@ -54,7 +55,7 @@ export function MigrationInfo({
               </Text>
               <Text as="p" variant="secondary" sx={{ mt: 2 }}>
                 Please finalize your migration as soon as possible so that your delegators can swiftly migrate
-                their MKR, minimizing risk of governance attacks.
+                their GSUp, minimizing risk of governance attacks.
               </Text>
             </Flex>
           </Flex>

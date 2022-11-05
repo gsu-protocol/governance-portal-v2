@@ -54,7 +54,7 @@ const ESModule = (): React.ReactElement => {
           </Text>
           {thresholdAmount && (
             <Text color="#708390" sx={{ fontWeight: '400' }}>
-              &nbsp;of {thresholdAmount ? `${formatValue(thresholdAmount, 'wad', 0)} MKR` : '---'}
+              &nbsp;of {thresholdAmount ? `${formatValue(thresholdAmount, 'wad', 0)} GSUp` : '---'}
             </Text>
           )}
         </Flex>
@@ -170,10 +170,10 @@ const ESModule = (): React.ReactElement => {
           }}
         >
           <Text data-testid="es-initiated" sx={{ textAlign: 'center' }}>
-            Emergency shutdown has been initiated on {formatDateWithTime(cageTime.toNumber())}. This dashboard
-            is currently read-only. You can read more information about next steps{' '}
+            Emergency shutdown has been initiated on {formatDateWithTime(cageTime.toNumber() * 1000)}. This
+            dashboard is currently read-only. You can read more information about next steps{' '}
             <ExternalLink
-              href="https://makerdao.world/en/learn/governance/emergency-shutdown"
+              href="https://gsuprotocol.world/en/learn/governance/emergency-shutdown"
               title="Learn about emergency shutdown"
             >
               <Text>here</Text>
@@ -187,11 +187,11 @@ const ESModule = (): React.ReactElement => {
       </Box>
       <Box mt={2}>
         <Text variant="text" sx={{ color: 'onSecondary' }}>
-          The ESM allows MKR holders to shutdown the system without a central authority. Once{' '}
-          {thresholdAmount ? `${formatValue(thresholdAmount, 'wad', 0)}` : '---'} MKR are entered into the
+          The ESM allows GSUp holders to shutdown the system without a central authority. Once{' '}
+          {thresholdAmount ? `${formatValue(thresholdAmount, 'wad', 0)}` : '---'} GSUp are entered into the
           ESM, emergency shutdown can be executed.{' '}
           <ExternalLink
-            href="https://docs.makerdao.com/smart-contract-modules/emergency-shutdown-module"
+            href="https://docs.gsuprotocol.io/smart-contract-modules/emergency-shutdown-module"
             title="View emergency shutdown docs"
           >
             <Text>Read the documentation here.</Text>
@@ -199,7 +199,7 @@ const ESModule = (): React.ReactElement => {
         </Text>
       </Box>
       <Box sx={{ mt: 4 }}>
-        <Text variant="microHeading">Total MKR Burned</Text>
+        <Text variant="microHeading">Total GSUp Burned</Text>
       </Box>
       <Card mt={3}>
         {bpi < 1 ? <MobileView /> : <DesktopView />}
@@ -224,7 +224,7 @@ const ESModule = (): React.ReactElement => {
               variant="outline"
               sx={{ color: 'onNotice', borderColor: 'notice', borderRadius: 'small' }}
             >
-              {esmThresholdMet ? 'Initiate Emergency Shutdown' : 'Burn Your MKR'}
+              {esmThresholdMet ? 'Initiate Emergency Shutdown' : 'Burn Your GSUp'}
             </Button>
           ) : null}
           <Box p={2}>
@@ -236,7 +236,7 @@ const ESModule = (): React.ReactElement => {
                   in the ESM
                 </Box>
               ) : (
-                'You have no MKR in the ESM'
+                'You have no GSUp in the ESM'
               )}
             </Text>
           </Box>

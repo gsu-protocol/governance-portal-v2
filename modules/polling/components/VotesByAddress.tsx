@@ -130,7 +130,7 @@ const VotesByAddress = ({ tally, poll }: Props): JSX.Element => {
               variant="caps"
               onClick={() => changeSort('mkr')}
             >
-              MKR
+              GSUp
               {sortBy.type === 'mkr' ? (
                 sortBy.order === 1 ? (
                   <Icon name="chevron_down" size={2} ml={1} />
@@ -207,7 +207,7 @@ const VotesByAddress = ({ tally, poll }: Props): JSX.Element => {
                     sx={{ textAlign: 'right', pb: 2, fontSize: [1, 3] }}
                   >
                     {`${formatValue(parseUnits(v.mkrSupport.toString()), undefined, undefined, true, true)}${
-                      bpi > 0 ? ' MKR' : ''
+                      bpi > 0 ? ' GSUp' : ''
                     }`}
                   </Text>
                 </tr>

@@ -79,7 +79,7 @@ export async function fetchDelegatedTo(
       utils.parseEther(prev.lockAmount).gt(utils.parseEther(next.lockAmount)) ? -1 : 1
     );
   } catch (e) {
-    logger.error('fetchDelegatedTo: Error fetching MKR delegated to address', e.message);
+    logger.error('fetchDelegatedTo: Error fetching GSUp delegated to address', e.message);
     return [];
   }
 }

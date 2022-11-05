@@ -105,11 +105,13 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
 
             <Flex
               sx={{
+                gap: 2,
                 flexDirection: 'row',
                 alignItems: 'center',
+                flexWrap: 'wrap',
                 ml: 2,
                 my: 2,
-                justifyContent: 'right'
+                justifyContent: ['center', 'right']
               }}
             >
               {hasMkrDelegated && (
@@ -120,7 +122,7 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
                     trackButtonClick('openUndelegateModal');
                     setShowUndelegateModal(true);
                   }}
-                  sx={{ width: '135px', height: '45px', maxWidth: '135px', mr: [2, 2] }}
+                  sx={{ width: '100%', height: '45px', maxWidth: ['280px', '135px'], mr: [2, 2] }}
                   data-testid="button-undelegate"
                 >
                   Undelegate
@@ -135,10 +137,10 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
                   setShowDelegateModal(true);
                 }}
                 sx={{
-                  width: '135px',
-                  maxWidth: '135px',
+                  width: '100%',
+                  maxWidth: ['280px', '135px'],
                   height: '45px',
-                  ml: hasMkrDelegated ? 3 : 0
+                  ml: hasMkrDelegated ? [0, 3] : 0
                 }}
               >
                 Delegate
@@ -233,7 +235,7 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
                       color="onSecondary"
                       sx={{ textAlign: 'right', fontSize: [1, 2, 3] }}
                     >
-                      MKR delegated by you
+                      GSUp delegated by you
                     </Text>
                   </Box>
                 )}
@@ -252,7 +254,7 @@ export function DelegateOverviewCard({ delegate }: PropTypes): React.ReactElemen
                     color="onSecondary"
                     sx={{ textAlign: 'right', fontSize: [1, 2, 3] }}
                   >
-                    Total MKR delegated
+                    Total GSUp delegated
                   </Text>
                 </Box>
               </Flex>

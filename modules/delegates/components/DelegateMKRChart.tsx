@@ -65,7 +65,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
     return (
       <Box>
         {monthMKR && <Text as="p">{formatXAxis(monthMKR.date)}</Text>}
-        <Text as="p">MKR Weight: {new BigNumber(monthMKR?.MKR || 0).toFormat(2)}</Text>
+        <Text as="p">GSUp Weight: {new BigNumber(monthMKR?.MKR || 0).toFormat(2)}</Text>
       </Box>
     );
   }
@@ -103,7 +103,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
             Voting Weight
           </Text>
           <Text as="p" variant="secondary" color="onSurface">
-            MKR delegated over time
+            GSUp delegated over time
           </Text>
         </Box>
         <Box>
@@ -128,8 +128,8 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
         <AreaChart data={data || []} margin={{ bottom: 66, left: 20, right: 20, top: 10 }}>
           <defs>
             <linearGradient id="gradientFront" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#1AAB9B" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#1AAB9B" stopOpacity={0} />
+              <stop offset="5%" stopColor="#d42f5d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#d42f5d" stopOpacity={0} />
             </linearGradient>
           </defs>
 
@@ -151,7 +151,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
             label={{
               fill: '#708390',
               position: 'bottomLeft',
-              value: 'MKR',
+              value: 'GSUp',
               viewBox: { height: 10, width: 10, x: 20, y: 300 }
             }}
             tickMargin={5}
@@ -161,7 +161,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
           <CartesianGrid stroke="#D5D9E0" strokeDasharray="5 5" />
           <Tooltip content={renderTooltip} />
 
-          <Area dataKey="MKR" stroke={'#1AAB9B'} type="monotone" fill="url(#gradientFront)" />
+          <Area dataKey="MKR" stroke={'#d42f5d'} type="monotone" fill="url(#gradientFront)" />
 
           <ReferenceLine stroke={'#D4D9E1'} x={0} y={0} />
         </AreaChart>
@@ -183,7 +183,7 @@ export function DelegateMKRChart({ delegate }: { delegate: Delegate }): React.Re
             }}
           />
           <Text variant="secondary" color="onSurface">
-            MKR delegated to this delegate
+            GSUp delegated to this delegate
           </Text>
         </Box>
       </Box>

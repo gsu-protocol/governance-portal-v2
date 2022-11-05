@@ -49,12 +49,11 @@ export const DelegateModal = ({
 
   const { data: mkrBalance, mutate: mutateMkrBalance } = useMkrBalance(account);
 
-  const { data: mkrAllowance, mutate: mutateTokenAllowance } = useTokenAllowance(
-    Tokens.MKR,
-    parseUnits('100000000'),
-    account,
-    voteDelegateAddress
-  );
+  const {
+    isValidating: mkrAllowanceLoading,
+    data: mkrAllowance,
+    mutate: mutateTokenAllowance
+  } = useTokenAllowance(Tokens.MKR, parseUnits('100000000'), account, voteDelegateAddress);
 
   const { approve, tx: approveTx, setTxId: resetApprove } = useApproveUnlimitedToken(Tokens.MKR);
 
@@ -72,6 +71,8 @@ export const DelegateModal = ({
     // Reset the confirmation step
     setConfirmStep(false);
   }, [isOpen]);
+
+  console.log('mkrAllowanceLoading', mkrAllowanceLoading);
 
   return (
     <>
@@ -106,7 +107,7 @@ export const DelegateModal = ({
                     mkrToDeposit,
                     'wad',
                     6
-                  )} MKR to ${delegate.name}.`}
+                  )} GSUp to ${delegate.name}.`}
                 >
                   <Box sx={{ textAlign: 'left', margin: '0 auto', p: 3 }}>
                     <DelegateAvatarName delegate={delegate} />
@@ -114,7 +115,7 @@ export const DelegateModal = ({
                 </TxDisplay>
               ) : (
                 <>
-                  {mkrAllowance ? (
+                  {mkrAllowanceLoading ? null : mkrAllowance ? (
                     confirmStep ? (
                       <ConfirmContent
                         mkrToDeposit={mkrToDeposit}
@@ -133,10 +134,10 @@ export const DelegateModal = ({
                     ) : (
                       <InputDelegateMkr
                         title={title}
-                        description="Input the amount of MKR to deposit into the delegate contract."
+                        description="Input the amount of GSUp to deposit into the delegate contract."
                         onChange={setMkrToDeposit}
                         balance={mkrBalance}
-                        buttonLabel="Delegate MKR"
+                        buttonLabel="Delegate GSUp"
                         onClick={() => setConfirmStep(true)}
                         showAlert={true}
                       />
@@ -153,7 +154,7 @@ export const DelegateModal = ({
                       title={'Approve Delegate Contract'}
                       buttonLabel={'Approve Delegate Contract'}
                       description={
-                        'Approve the transfer of MKR tokens to the delegate contract to deposit your MKR.'
+                        'Approve the transfer of GSUp tokens to the delegate contract to deposit your GSUp.'
                       }
                     />
                   )}

@@ -41,7 +41,7 @@ export default function DelegateMigrationPage(): React.ReactElement {
     });
   }, [delegatesData, delegatedTo.data]);
 
-  // Historical list of delegates that the user interacted with that are about to expiry (no need to have current MKR delegated to them)
+  // Historical list of delegates that the user interacted with that are about to expiry (no need to have current GSUp delegated to them)
   const delegatesThatAreAboutToExpiry: Delegate[] = useMemo(() => {
     if (!delegatesData || !delegatedTo.data) {
       return [];
@@ -92,7 +92,7 @@ export default function DelegateMigrationPage(): React.ReactElement {
 
   return (
     <PrimaryLayout sx={{ maxWidth: 'dashboard' }}>
-      <HeadComponent title="Migrate your MKR to a new delegate contract" />
+      <HeadComponent title="Migrate your GSUp to a new delegate contract" />
 
       {!account && (
         <Box>
@@ -111,12 +111,12 @@ export default function DelegateMigrationPage(): React.ReactElement {
             <Stack gap={4} sx={{ maxWidth: '950px', margin: '0 auto' }}>
               <Box>
                 <Heading mb={2} as="h4" sx={{ textAlign: 'left', fontWeight: 'bold' }}>
-                  Action required: Migrate your delegated MKR
+                  Action required: Migrate your delegated GSUp
                 </Heading>
                 <Text as="p" variant="secondary">
-                  One or more of your MakerDAO delegate&lsquo;s contracts are expiring.{' '}
+                  One or more of your GSU protocol delegate&lsquo;s contracts are expiring.{' '}
                   <ExternalLink
-                    href="https://manual.makerdao.com/delegation/delegate-expiration"
+                    href="https://manual.gsuprotocol.io/delegation/delegate-expiration"
                     title="Read more about delegate expiration"
                   >
                     <span sx={{ color: 'accentBlue' }}>Read more about delegate expiration.</span>
@@ -130,15 +130,15 @@ export default function DelegateMigrationPage(): React.ReactElement {
                 </Box>
                 <Box>
                   <Text as="p" sx={{ fontWeight: '600' }}>
-                    Maker delegate contracts expire after 1 year.
+                    GSU protocol delegate contracts expire after 1 year.
                   </Text>
                   <Text as="p" variant="secondary" sx={{ mt: 2 }}>
-                    Please migrate your MKR by undelegating from the expiring/expired contracts and
+                    Please migrate your GSUp by undelegating from the expiring/expired contracts and
                     redelegating to the new contracts.
                   </Text>
                   <Text as="p" variant="secondary">
-                    On this page you&apos;ll find your delegates that require migrating your delegated MKR due
-                    to expiration.
+                    On this page you&apos;ll find your delegates that require migrating your delegated GSUp
+                    due to expiration.
                   </Text>
                 </Box>
               </Card>
@@ -146,10 +146,10 @@ export default function DelegateMigrationPage(): React.ReactElement {
               <Box>
                 <Box>
                   <Text as="h2" variant="heading">
-                    MKR delegated to expiring/expired delegate contracts
+                    GSUp delegated to expiring/expired delegate contracts
                   </Text>
                   <Text as="p" variant="secondary" sx={{ mt: 2 }}>
-                    Please undelegate your MKR from the old contracts below, one by one.
+                    Please undelegate your GSUp from the old contracts below, one by one.
                   </Text>
                   <Text as="p" variant="secondary">
                     An approval transaction will be required if this is your first time undelegating from this
@@ -207,7 +207,7 @@ export default function DelegateMigrationPage(): React.ReactElement {
                     Renewed contracts of your previous delegates
                   </Text>
                   <Text as="p" variant="secondary" sx={{ mt: 2 }}>
-                    Please delegate your MKR to the renewed contracts below, one by one.
+                    Please delegate your GSUp to the renewed contracts below, one by one.
                   </Text>
                   <Text as="p" variant="secondary">
                     An approval transaction will be required if this is your first time delegating to this
@@ -268,7 +268,7 @@ export default function DelegateMigrationPage(): React.ReactElement {
                   No action required
                 </Text>
                 <Text as="p" mb={2} variant="secondary">
-                  You don&apos;t have any MKR delegated to expiring/expired delegate contracts
+                  You don&apos;t have any GSUp delegated to expiring/expired delegate contracts
                 </Text>
                 <Link href="/delegates">
                   <Button sx={{ mt: 2, mb: 2 }}>Go to delegates page</Button>

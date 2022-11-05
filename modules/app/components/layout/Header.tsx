@@ -81,7 +81,7 @@ const HeaderMenu = ({ onToggleTheme, mode, ...props }): JSX.Element => {
         >
           <ExternalLink
             styles={{ variant: 'links.nostyle' }}
-            href="https://discord.gg/GHcFMdKden"
+            href="https://discord.com/invite/cm3tmM37W3"
             title="Support"
           >
             <MenuItemContent icon="discord_outline" label="Support" />
@@ -95,7 +95,7 @@ const HeaderMenu = ({ onToggleTheme, mode, ...props }): JSX.Element => {
         >
           <ExternalLink
             styles={{ variant: 'links.nostyle' }}
-            href="https://governance-metrics-dashboard.vercel.app/"
+            href="https://governance-metrics-dashboard.gsuprotocol.io/"
             title="Stats"
           >
             <MenuItemContent icon="stats" label="Stats" />
@@ -109,7 +109,7 @@ const HeaderMenu = ({ onToggleTheme, mode, ...props }): JSX.Element => {
         >
           <ExternalLink
             styles={{ variant: 'links.nostyle' }}
-            href="https://makerdao.world/en/learn/governance/"
+            href="https://gsuprotocol.world/en/learn/governance/"
             title="FAQs"
           >
             <MenuItemContent icon="faq" label="FAQs" />
@@ -121,7 +121,7 @@ const HeaderMenu = ({ onToggleTheme, mode, ...props }): JSX.Element => {
             variant: 'menubuttons.default.headerItem'
           }}
         >
-          <MenuItemContent icon="color_mode_sun" label={`${mode === 'dark' ? 'Light' : 'Dark'} mode`} />
+          {/* <MenuItemContent icon="color_mode_sun" label={`${mode === 'dark' ? 'Light' : 'Dark'} mode`} /> */}
         </MenuItem>
       </MenuList>
     </Menu>
@@ -163,7 +163,7 @@ const Header = (): JSX.Element => {
       as="header"
       pt={3}
       pb={[4, 5]}
-      px={[2, 0]}
+      px={[1, 0]}
       variant="styles.header"
       sx={{
         display: 'flex',
@@ -174,8 +174,8 @@ const Header = (): JSX.Element => {
     >
       <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
         <InternalLink href={'/'} title="View homepage">
-          <IconButton aria-label="Maker home" sx={{ width: '40px', height: 4, p: 0 }}>
-            <Icon name="maker" size="40px" color="text" sx={{ cursor: 'pointer' }} />
+          <IconButton aria-label="GSU protocol home" sx={{ width: ['100px', '130px'], height: 'auto', p: 0 }}>
+            <Icon name="maker" size="130px" color="text" sx={{ cursor: 'pointer' }} />
           </IconButton>
         </InternalLink>
         <Flex sx={{ ml: [0, 4, 4, 5] }}>
@@ -351,8 +351,8 @@ const MobileMenu = ({ hide, router, gas, onToggleTheme, mode, network }) => {
         }}
       >
         <InternalLink href={'/'} title="View homepage">
-          <IconButton aria-label="Maker home" sx={{ width: '40px', height: 4, p: 0 }}>
-            <Icon name="maker" size="40px" color="text" sx={{ cursor: 'pointer' }} />
+          <IconButton aria-label="GSU protocol home" sx={{ width: '130px', height: 'auto', p: 0 }}>
+            <Icon name="maker" size="130px" color="ornament" sx={{ height: 'auto', cursor: 'pointer' }} />
           </IconButton>
         </InternalLink>
         <Flex sx={{ alignItems: 'center', gap: 2 }}>
@@ -434,7 +434,7 @@ const MobileMenu = ({ hide, router, gas, onToggleTheme, mode, network }) => {
             <Flex onClick={hide}>
               <ExternalLink
                 styles={{ variant: 'links.nostyle' }}
-                href="https://discord.gg/GHcFMdKden"
+                href="https://discord.com/invite/cm3tmM37W3"
                 title="Support"
               >
                 <MenuItemContent icon="discord_outline" label="Support" />
@@ -446,7 +446,7 @@ const MobileMenu = ({ hide, router, gas, onToggleTheme, mode, network }) => {
             <Flex onClick={hide}>
               <ExternalLink
                 styles={{ variant: 'links.nostyle' }}
-                href="https://governance-metrics-dashboard.vercel.app/"
+                href="https://governance-metrics-dashboard.gsuprotocol.io/"
                 title="Stats"
               >
                 <MenuItemContent icon="stats" label="Stats" />
@@ -455,14 +455,14 @@ const MobileMenu = ({ hide, router, gas, onToggleTheme, mode, network }) => {
             <Flex onClick={hide}>
               <ExternalLink
                 styles={{ variant: 'links.nostyle' }}
-                href="https://makerdao.world/en/learn/governance/"
+                href="https://gsuprotocol.world/en/learn/governance/"
                 title="FAQs"
               >
                 <MenuItemContent icon="faq" label="FAQs" />
               </ExternalLink>
             </Flex>
             <Flex onClick={onToggleTheme}>
-              <MenuItemContent icon="color_mode_sun" label={`${mode === 'dark' ? 'Light' : 'Dark'} mode`} />
+              {/* <MenuItemContent icon="color_mode_sun" label={`${mode === 'dark' ? 'Light' : 'Dark'} mode`} /> */}
             </Flex>
           </Flex>
         </Flex>

@@ -76,7 +76,7 @@ export default function TopDelegates({
           </Box>
           <Box sx={{ width: '30%', textAlign: 'left', display: ['none', 'block'] }}>
             <Text as="p" variant="caps" sx={{ color: 'secondaryEmphasis' }}>
-              MKR
+              GSUp
             </Text>
           </Box>
         </Flex>
@@ -133,7 +133,7 @@ export default function TopDelegates({
                     display: ['none', 'flex']
                   }}
                 >
-                  <Text as="p">{formatValue(parseUnits(delegate.mkrDelegated))} MKR </Text>
+                  <Text as="p">{formatValue(parseUnits(delegate.mkrDelegated))} GSUp </Text>
                   <Button
                     variant="outline"
                     data-testid="button-delegate"
@@ -180,9 +180,9 @@ export default function TopDelegates({
                     </Box>
                     <Box sx={{ width: '50%', textAlign: 'right' }}>
                       <Text as="p" variant="caps" sx={{ color: 'secondaryEmphasis' }}>
-                        MKR
+                        GSUp
                       </Text>
-                      <Text as="p">{formatValue(parseUnits(delegate.mkrDelegated))} MKR </Text>
+                      <Text as="p">{formatValue(parseUnits(delegate.mkrDelegated))} GSUp </Text>
                     </Box>
                   </Flex>
                   <Flex mb={3} sx={{ justifyContent: 'center' }}>
@@ -204,7 +204,7 @@ export default function TopDelegates({
                         }
                       }}
                     >
-                      Delegate MKR to this delegate
+                      Delegate GSUp to this delegate
                     </Button>
                   </Flex>
                   <Divider />

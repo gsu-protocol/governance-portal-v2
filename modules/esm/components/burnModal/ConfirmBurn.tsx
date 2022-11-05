@@ -36,7 +36,7 @@ const ConfirmBurnView = ({ passValue, value, setValue, burnAmount, totalStaked }
         }}
       >
         <Text>Burn amount</Text>
-        <Text>{formatValue(burnAmount, 'wad', 6)} MKR</Text>
+        <Text>{formatValue(burnAmount, 'wad', 6)} GSUp</Text>
       </Flex>
       <Divider />
       <Flex
@@ -49,7 +49,7 @@ const ConfirmBurnView = ({ passValue, value, setValue, burnAmount, totalStaked }
         }}
       >
         <Text>New ESM total</Text>
-        <Text>{formatValue(burnAmount.add(totalStaked), 'wad', 6)} MKR</Text>
+        <Text>{formatValue(burnAmount.add(totalStaked), 'wad', 6)} GSUp</Text>
       </Flex>
       <Text
         variant="microHeading"
@@ -91,7 +91,7 @@ const ConfirmBurn = ({
   const bpi = useBreakpointIndex();
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [mkrApprovePending, setMkrApprovePending] = useState(false);
-  const passValue = `I am burning ${formatValue(burnAmount, 'wad', 6)} MKR`;
+  const passValue = `I am burning ${formatValue(burnAmount, 'wad', 6)} GSUp`;
   const [value, setValue] = useState('');
   const changeTerms = e => {
     setTermsAccepted(e.target.checked);
@@ -111,7 +111,7 @@ const ConfirmBurn = ({
       <Close onClick={() => setShowDialog(false)} sx={{ alignSelf: 'flex-end' }} />
       <Flex></Flex>
       <Text variant="heading" sx={{ textAlign: 'center' }}>
-        Burn your MKR in the ESM
+        Burn your GSUp in the ESM
       </Text>
       {bpi < 1 ? (
         <ConfirmBurnView
@@ -150,7 +150,7 @@ const ConfirmBurn = ({
           disabled={mkrApprovePending}
         />
         <Flex ml={3}>
-          <Text>Unlock MKR to continue</Text>
+          <Text>Unlock GSUp to continue</Text>
         </Flex>
       </Flex>
       <Flex sx={{ flexDirection: 'row', alignItems: 'center', mt: 3 }}>

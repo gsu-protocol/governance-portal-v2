@@ -32,16 +32,16 @@ export const useDelegateFree = (voteDelegateAddress: string): LockResponse => {
 
   const free = (mkrToWithdraw: BigNumber, callbacks?: Record<string, () => void>) => {
     const freeTxCreator = () => vdContract.free(mkrToWithdraw);
-    const txId = track(freeTxCreator, account, 'Withdrawing MKR', {
+    const txId = track(freeTxCreator, account, 'Withdrawing GSUp', {
       pending: () => {
         if (typeof callbacks?.pending === 'function') callbacks.pending();
       },
       mined: txId => {
-        transactionsApi.getState().setMessage(txId, 'MKR withdrawn');
+        transactionsApi.getState().setMessage(txId, 'GSUp withdrawn');
         if (typeof callbacks?.mined === 'function') callbacks.mined();
       },
       error: txId => {
-        transactionsApi.getState().setMessage(txId, 'MKR withdrawal failed');
+        transactionsApi.getState().setMessage(txId, 'GSUp withdrawal failed');
         if (typeof callbacks?.error === 'function') callbacks.error();
       }
     });

@@ -98,14 +98,14 @@ export default function DelegateExpiryDate({
                   This delegate contract {delegate.expired ? 'has expired' : 'is about to expire'}.
                 </Heading>
                 <Text sx={{ mb: 3, color: 'onSecondary', textAlign: 'center' }}>
-                  Maker delegate contracts expire after 1 year. Please{' '}
-                  <InternalLink href="/migration/delegator" title="Migrate your MKR">
-                    <span sx={{ color: 'accentBlue' }}>migrate your MKR</span>
+                  GSU protocol delegate contracts expire after 1 year. Please{' '}
+                  <InternalLink href="/migration/delegator" title="Migrate your GSUp">
+                    <span sx={{ color: 'accentBlue' }}>migrate your GSUp</span>
                   </InternalLink>{' '}
                   by undelegating from the expiring/expired contracts and redelegating to the new contracts.
                 </Text>
                 <ThemeUILink
-                  href={'https://manual.makerdao.com/delegation/delegate-expiration'}
+                  href={'https://manual.gsuprotocol.io/delegation/delegate-expiration'}
                   sx={{ mb: 3 }}
                   target="_blank"
                   rel="noreferrer"

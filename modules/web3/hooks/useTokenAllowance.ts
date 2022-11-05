@@ -5,6 +5,7 @@ import { useContracts } from './useContracts';
 
 type TokenAllowanceResponse = {
   data?: boolean;
+  isValidating: boolean;
   loading: boolean;
   error?: Error;
   mutate: () => void;
@@ -19,7 +20,7 @@ export const useTokenAllowance = (
 ): TokenAllowanceResponse => {
   const token: ethers.Contract = useContracts()[name];
 
-  const { data, error, mutate } = useSWR(
+  const { data, error, mutate, isValidating } = useSWR(
     userAddress && contractAddress ? ['token-balance', token.address, userAddress, contractAddress] : null,
     async (_, tokenAddress, userAddress, contractAddress) => {
       const ethersBn: BigNumber = await token.allowance(userAddress, contractAddress);
@@ -28,6 +29,7 @@ export const useTokenAllowance = (
   );
 
   return {
+    isValidating,
     data,
     loading: !error && !data,
     error,

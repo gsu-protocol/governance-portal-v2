@@ -67,7 +67,7 @@ export default function CommentItem({
                   undefined,
                   true,
                   true
-                )} MKR`}
+                )} GSUp`}
           </Text>
 
           {comment.comment.txHash && (

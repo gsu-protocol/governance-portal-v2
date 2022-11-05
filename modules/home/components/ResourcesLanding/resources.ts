@@ -6,15 +6,15 @@ export enum ResourceCategory {
 }
 
 enum ResourceBackground {
-  GOVERNANCE = 'linear-gradient(260.14deg, #DEE8C4 0%, #AAE4D7 97.43%)',
-  PRODUCTS_AND_TOOLS = 'linear-gradient(260.14deg, #E2CCFF 0%, #9A4BFF 97.43%)',
-  DEVELOPERS = 'linear-gradient(260.14deg, #F4B7FE 0%, #E64BFF 97.43%)'
+  GOVERNANCE = 'linear-gradient(260.14deg, #DEE8C4 0%, #d42f5d 97.43%)',
+  PRODUCTS_AND_TOOLS = 'linear-gradient(260.14deg, #E2CCFF 0%, #df567c 97.43%)',
+  DEVELOPERS = 'linear-gradient(260.14deg, #F4B7FE 0%, #d42f5d 97.43%)'
 }
 
 export enum ResourceColor {
-  GOVERNANCE = '#1ACCA7',
-  PRODUCTS_AND_TOOLS = '#9A4BFF',
-  DEVELOPERS = '#E64BFF'
+  GOVERNANCE = '#d42f5d',
+  PRODUCTS_AND_TOOLS = '#df567c',
+  DEVELOPERS = '#e94a7433'
 }
 
 type LandingResource = {
@@ -29,24 +29,23 @@ type LandingResource = {
 
 export const resources: LandingResource[] = [
   {
-    title: 'Maker Governance Forum',
-    url: 'https://forum.makerdao.com/',
+    title: 'GSU protocol Governance Forum',
+    url: 'https://forum.gsuprotocol.io/',
     category: ResourceCategory.GOVERNANCE,
     bg: ResourceBackground.GOVERNANCE,
     color: ResourceColor.GOVERNANCE,
     logo: '/assets/resource_icon_1.svg',
-    summary:
-      'Participate in or start new discussions related to the governance of MakerDAO and the Maker protocol.'
+    summary: 'Participate in or start new discussions related to the governance of GSU protocol.'
   },
   {
-    title: 'Maker Operation Manual',
-    url: 'https://manual.makerdao.com',
+    title: 'GSU protocol Operation Manual',
+    url: 'https://manual.gsuprotocol.io',
     category: ResourceCategory.GOVERNANCE,
     bg: ResourceBackground.GOVERNANCE,
     color: ResourceColor.GOVERNANCE,
     logo: '/assets/resource_icon_2.svg',
     summary:
-      'Documentation on the Maker protocol & MakerDAO processes, written for MKR holders that actively participate in governance.'
+      'Documentation on the GSU protocol processes, written for GSUp holders that actively participate in governance.'
   },
   {
     title: 'Governance Tracking Sheet',
@@ -56,65 +55,64 @@ export const resources: LandingResource[] = [
     color: ResourceColor.GOVERNANCE,
     logo: '/assets/resource_icon_3.svg',
     summary:
-      'A daily updated breakdown of the current and future governance actions taking place in MakerDAO.'
+      'A daily updated breakdown of the current and future governance actions taking place in GSU protocol.'
   },
   {
-    title: 'Oasis',
-    url: 'https://oasis.app/',
+    title: 'gsucoin',
+    url: 'https://gsuprotocol.io/',
     category: ResourceCategory.PRODUCTS_AND_TOOLS,
     bg: ResourceBackground.PRODUCTS_AND_TOOLS,
     color: ResourceColor.PRODUCTS_AND_TOOLS,
     logo: '/assets/resource_icon_4.svg',
     summary:
-      'The most popular user interface for interacting with the Maker Protocol, used for creating & managing vaults.'
+      'The most popular user interface for interacting with the GSU protocol, used for creating & managing vaults.'
   },
   {
     title: 'Auctions Dashboard',
-    url: 'http://auctions.makerdao.network',
+    url: 'http://unified-auctions.gsuprotocol.io',
     category: ResourceCategory.PRODUCTS_AND_TOOLS,
     bg: ResourceBackground.PRODUCTS_AND_TOOLS,
     color: ResourceColor.PRODUCTS_AND_TOOLS,
     logo: '/assets/resource_icon_5.svg',
-    summary: 'A unified dashboard for understanding & interacting with auctions of the Maker Protocol.'
+    summary: 'A unified dashboard for understanding & interacting with auctions of the GSU protocol.'
   },
-  {
-    title: 'MakerBurn',
-    url: 'https://makerburn.com/#/',
-    category: ResourceCategory.PRODUCTS_AND_TOOLS,
-    bg: ResourceBackground.PRODUCTS_AND_TOOLS,
-    color: ResourceColor.PRODUCTS_AND_TOOLS,
-    logo: '/assets/resource_icon_6.svg',
-    summary:
-      'A data dashboard for the Maker Protocol and MakerDAO, displaying burn rate, revenues, expenses and more.'
-  },
+  // {
+  //   title: 'GSU Burn',
+  //   url: 'https://makerburn.com/#/',
+  //   category: ResourceCategory.PRODUCTS_AND_TOOLS,
+  //   bg: ResourceBackground.PRODUCTS_AND_TOOLS,
+  //   color: ResourceColor.PRODUCTS_AND_TOOLS,
+  //   logo: '/assets/resource_icon_6.svg',
+  //   summary: 'A data dashboard for the GSU protocol, displaying burn rate, revenues, expenses and more.'
+  // },
   {
     title: 'Technical Docs',
-    url: 'https://docs.makerdao.com/',
+    url: 'https://docs.gsuprotocol.io/',
     category: ResourceCategory.DEVELOPERS,
     bg: ResourceBackground.DEVELOPERS,
     color: ResourceColor.DEVELOPERS,
     logo: '/assets/resource_icon_7.svg',
     summary:
-      'Technical documentation about the MakerDAO protocol, covering all its mechanisms, smart contracts and more.'
+      'Technical documentation about the GSU protocol protocol, covering all its mechanisms, smart contracts and more.'
   },
   {
-    title: 'MakerDAO GitHub',
-    url: 'https://github.com/makerdao/',
+    title: 'GSU protocol GitHub',
+    url: 'https://github.com/gsu-protocol/',
     category: ResourceCategory.DEVELOPERS,
     bg: ResourceBackground.DEVELOPERS,
     color: ResourceColor.DEVELOPERS,
     logo: '/assets/resource_icon_8.svg',
     summary:
-      'GitHub organization with many repositories relevant to MakerDAO and goverance, including the community repo and the codebase for this site.'
+      'GitHub organization with many repositories relevant to GSU protocol and goverance, including the community repo and the codebase for this site.'
   },
   {
     title: 'API Docs',
-    url: 'https://vote.makerdao.com/api-docs',
+    url: '/api-docs',
     category: ResourceCategory.DEVELOPERS,
     bg: ResourceBackground.DEVELOPERS,
     color: ResourceColor.DEVELOPERS,
     logo: '/assets/resource_icon_9.svg',
     summary:
-      'Automatically generated API documentation for the Governance Portal API, used to query MakerDAO governance data.'
+      'Automatically generated API documentation for the Governance Portal API, used to query GSU protocol governance data.'
   }
 ];

@@ -67,7 +67,7 @@ import invariant from 'tiny-invariant';
  *           0: 'Abstain'
  *           1: 'Yes'
  *           2: 'No'
- *         discussionLink: 'https://forum.makerdao.com'
+ *         discussionLink: 'https://forum.gsuprotocol.io'
  *         voteType: 'Plurality Voting'
  *         tags: [{ id: 'greenlight', longname: 'Greenlight', shortname: 'Greenlight', description: 'Lorem ipsum' }]
  *         ctx:

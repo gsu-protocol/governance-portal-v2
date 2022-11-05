@@ -29,12 +29,12 @@ const ModalContent = ({
       <Close onClick={() => setShowDialog(false)} sx={{ alignSelf: 'flex-end' }} />
       <Icon ml={2} name="warning" size={5} sx={{ color: 'notice' }} />
       <Text variant="heading" mt={4}>
-        Shutting down the Dai Credit System
+        Shutting down the GSUc Credit System
       </Text>
       <Text variant="text" sx={{ mt: 3 }}>
-        The {thresholdAmount ? `${formatValue(thresholdAmount)}` : '---'} MKR limit for the emergency shutdown
-        module has been reached. By continuing past this alert, emergency shutdown will be initiated for the
-        Dai Credit System.
+        The {thresholdAmount ? `${formatValue(thresholdAmount)}` : '---'} GSUp limit for the emergency
+        shutdown module has been reached. By continuing past this alert, emergency shutdown will be initiated
+        for the GSUc Credit System.
       </Text>
       <Grid columns={2} mt={4}>
         <Button
