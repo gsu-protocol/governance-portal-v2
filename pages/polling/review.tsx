@@ -100,13 +100,13 @@ const PollingReview = ({ polls }: PollingReviewPageData) => {
       url = `https://vote.gsuprotocol.io/polling/${poll.slug}`;
       text = `I just voted ${
         option ? option + ' ' : ''
-      }on a MakerDAO governance poll! Learn more about the poll on the Governance Portal:`;
+      }on a GSU protocol governance poll! Learn more about the poll on the Governance Portal:`;
     } else {
       // all votes
       url = 'https://vote.gsuprotocol.io';
       text = `I just voted on ${
         previousVotesLength > 1 ? previousVotesLength : 'a'
-      } MakerDAO governance poll${
+      } GSU protocol governance poll${
         previousVotesLength > 1 ? 's' : ''
       }! Find my votes and all GSU protocol governance proposals on the Governance Portal:`;
     }
